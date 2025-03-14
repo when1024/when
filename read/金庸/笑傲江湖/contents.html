@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>contents</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+            ::selection {
+                  background-color: orange;
+                  color: white
+            }
+
+            code[class*=language-],
+            pre[class*=language-] {
+                  color: #333;
+                  background: 0 0;
+                  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+                  text-align: left;
+                  white-space: pre;
+                  word-spacing: normal;
+                  word-break: normal;
+                  word-wrap: normal;
+                  line-height: 1.4;
+                  -moz-tab-size: 8;
+                  -o-tab-size: 8;
+                  tab-size: 8;
+                  -webkit-hyphens: none;
+                  -moz-hyphens: none;
+                  -ms-hyphens: none;
+                  hyphens: none
+            }
+
+            pre[class*=language-] {
+                  padding: .8em;
+                  overflow: auto;
+                  border-radius: 3px;
+                  background: #f5f5f5
+            }
+
+            :not(pre)>code[class*=language-] {
+                  padding: .1em;
+                  border-radius: .3em;
+                  white-space: normal;
+                  background: #f5f5f5
+            }
+
+            .token.blockquote,
+            .token.comment {
+                  color: #969896
+            }
+
+            .token.cdata {
+                  color: #183691
+            }
+
+            .token.doctype,
+            .token.macro.property,
+            .token.punctuation,
+            .token.variable {
+                  color: #333
+            }
+
+            .token.builtin,
+            .token.important,
+            .token.keyword,
+            .token.operator,
+            .token.rule {
+                  color: #a71d5d
+            }
+
+            .token.attr-value,
+            .token.regex,
+            .token.string,
+            .token.url {
+                  color: #183691
+            }
+
+            .token.atrule,
+            .token.boolean,
+            .token.code,
+            .token.command,
+            .token.constant,
+            .token.entity,
+            .token.number,
+            .token.property,
+            .token.symbol {
+                  color: #0086b3
+            }
+
+            .token.prolog,
+            .token.selector,
+            .token.tag {
+                  color: #63a35c
+            }
+
+            .token.attr-name,
+            .token.class,
+            .token.class-name,
+            .token.function,
+            .token.id,
+            .token.namespace,
+            .token.pseudo-class,
+            .token.pseudo-element,
+            .token.url-reference .token.variable {
+                  color: #795da3
+            }
+
+            .token.entity {
+                  cursor: help
+            }
+
+            .token.title,
+            .token.title .token.punctuation {
+                  font-weight: 700;
+                  color: #1d3e81
+            }
+
+            .token.list {
+                  color: #ed6a43
+            }
+
+            .token.inserted {
+                  background-color: #eaffea;
+                  color: #55a532
+            }
+
+            .token.deleted {
+                  background-color: #ffecec;
+                  color: #bd2c00
+            }
+
+            .token.bold {
+                  font-weight: 700
+            }
+
+            .token.italic {
+                  font-style: italic
+            }
+
+            .language-json .token.property {
+                  color: #183691
+            }
+
+            .language-markup .token.tag .token.punctuation {
+                  color: #333
+            }
+
+            .language-css .token.function,
+            code.language-css {
+                  color: #0086b3
+            }
+
+            .language-yaml .token.atrule {
+                  color: #63a35c
+            }
+
+            code.language-yaml {
+                  color: #183691
+            }
+
+            .language-ruby .token.function {
+                  color: #333
+            }
+
+            .language-markdown .token.url {
+                  color: #795da3
+            }
+
+            .language-makefile .token.symbol {
+                  color: #795da3
+            }
+
+            .language-makefile .token.variable {
+                  color: #183691
+            }
+
+            .language-makefile .token.builtin {
+                  color: #0086b3
+            }
+
+            .language-bash .token.keyword {
+                  color: #0086b3
+            }
+
+            pre[data-line] {
+                  position: relative;
+                  padding: 1em 0 1em 3em
+            }
+
+            pre[data-line] .line-highlight-wrapper {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: transparent;
+                  display: block;
+                  width: 100%
+            }
+
+            pre[data-line] .line-highlight {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  padding: inherit 0;
+                  margin-top: 1em;
+                  background: hsla(24, 20%, 50%, .08);
+                  background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
+                  pointer-events: none;
+                  line-height: inherit;
+                  white-space: pre
+            }
+
+            pre[data-line] .line-highlight:before,
+            pre[data-line] .line-highlight[data-end]:after {
+                  content: attr(data-start);
+                  position: absolute;
+                  top: .4em;
+                  left: .6em;
+                  min-width: 1em;
+                  padding: 0 .5em;
+                  background-color: hsla(24, 20%, 50%, .4);
+                  color: #f4f1ef;
+                  font: bold 65%/1.5 sans-serif;
+                  text-align: center;
+                  vertical-align: .3em;
+                  border-radius: 999px;
+                  text-shadow: none;
+                  box-shadow: 0 1px #fff
+            }
+
+            pre[data-line] .line-highlight[data-end]:after {
+                  content: attr(data-end);
+                  top: auto;
+                  bottom: .4em
+            }
+
+            html body {
+                  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+                  font-size: 16px;
+                  line-height: 1.6;
+                  color: #333;
+                  background-color: #fff;
+                  overflow: initial;
+                  box-sizing: border-box;
+                  word-wrap: break-word
+            }
+
+            html body>:first-child {
+                  margin-top: 0
+            }
+
+            html body h1,
+            html body h2,
+            html body h3,
+            html body h4,
+            html body h5,
+            html body h6 {
+                  line-height: 1.2;
+                  margin-top: 1em;
+                  margin-bottom: 16px;
+                  color: #000
+            }
+
+            html body h1 {
+                  font-size: 2.25em;
+                  font-weight: 300;
+                  padding-bottom: .3em
+            }
+
+            html body h2 {
+                  font-size: 1.75em;
+                  font-weight: 400;
+                  padding-bottom: .3em
+            }
+
+            html body h3 {
+                  font-size: 1.5em;
+                  font-weight: 500
+            }
+
+            html body h4 {
+                  font-size: 1.25em;
+                  font-weight: 600
+            }
+
+            html body h5 {
+                  font-size: 1.1em;
+                  font-weight: 600
+            }
+
+            html body h6 {
+                  font-size: 1em;
+                  font-weight: 600
+            }
+
+            html body h1,
+            html body h2,
+            html body h3,
+            html body h4,
+            html body h5 {
+                  font-weight: 600
+            }
+
+            html body h5 {
+                  font-size: 1em
+            }
+
+            html body h6 {
+                  color: #5c5c5c
+            }
+
+            html body strong {
+                  color: #000
+            }
+
+            html body del {
+                  color: #5c5c5c
+            }
+
+            html body a:not([href]) {
+                  color: inherit;
+                  text-decoration: none
+            }
+
+            html body a {
+                  color: #08c;
+                  text-decoration: none
+            }
+
+            html body a:hover {
+                  color: #00a3f5;
+                  text-decoration: none
+            }
+
+            html body img {
+                  max-width: 100%
+            }
+
+            html body>p {
+                  margin-top: 0;
+                  margin-bottom: 16px;
+                  word-wrap: break-word
+            }
+
+            html body>ol,
+            html body>ul {
+                  margin-bottom: 16px
+            }
+
+            html body ol,
+            html body ul {
+                  padding-left: 2em
+            }
+
+            html body ol.no-list,
+            html body ul.no-list {
+                  padding: 0;
+                  list-style-type: none
+            }
+
+            html body ol ol,
+            html body ol ul,
+            html body ul ol,
+            html body ul ul {
+                  margin-top: 0;
+                  margin-bottom: 0
+            }
+
+            html body li {
+                  margin-bottom: 0
+            }
+
+            html body li.task-list-item {
+                  list-style: none
+            }
+
+            html body li>p {
+                  margin-top: 0;
+                  margin-bottom: 0
+            }
+
+            html body .task-list-item-checkbox {
+                  margin: 0 .2em .25em -1.8em;
+                  vertical-align: middle
+            }
+
+            html body .task-list-item-checkbox:hover {
+                  cursor: pointer
+            }
+
+            html body blockquote {
+                  margin: 16px 0;
+                  font-size: inherit;
+                  padding: 0 15px;
+                  color: #5c5c5c;
+                  background-color: #f0f0f0;
+                  border-left: 4px solid #d6d6d6
+            }
+
+            html body blockquote>:first-child {
+                  margin-top: 0
+            }
+
+            html body blockquote>:last-child {
+                  margin-bottom: 0
+            }
+
+            html body hr {
+                  height: 4px;
+                  margin: 32px 0;
+                  background-color: #d6d6d6;
+                  border: 0 none
+            }
+
+            html body table {
+                  margin: 10px 0 15px 0;
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  display: block;
+                  width: 100%;
+                  overflow: auto;
+                  word-break: normal;
+                  word-break: keep-all
+            }
+
+            html body table th {
+                  font-weight: 700;
+                  color: #000
+            }
+
+            html body table td,
+            html body table th {
+                  border: 1px solid #d6d6d6;
+                  padding: 6px 13px
+            }
+
+            html body dl {
+                  padding: 0
+            }
+
+            html body dl dt {
+                  padding: 0;
+                  margin-top: 16px;
+                  font-size: 1em;
+                  font-style: italic;
+                  font-weight: 700
+            }
+
+            html body dl dd {
+                  padding: 0 16px;
+                  margin-bottom: 16px
+            }
+
+            html body code {
+                  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+                  font-size: .85em;
+                  color: #000;
+                  background-color: #f0f0f0;
+                  border-radius: 3px;
+                  padding: .2em 0
+            }
+
+            html body code::after,
+            html body code::before {
+                  letter-spacing: -.2em;
+                  content: '\00a0'
+            }
+
+            html body pre>code {
+                  padding: 0;
+                  margin: 0;
+                  word-break: normal;
+                  white-space: pre;
+                  background: 0 0;
+                  border: 0
+            }
+
+            html body .highlight {
+                  margin-bottom: 16px
+            }
+
+            html body .highlight pre,
+            html body pre {
+                  padding: 1em;
+                  overflow: auto;
+                  line-height: 1.45;
+                  border: #d6d6d6;
+                  border-radius: 3px
+            }
+
+            html body .highlight pre {
+                  margin-bottom: 0;
+                  word-break: normal
+            }
+
+            html body pre code,
+            html body pre tt {
+                  display: inline;
+                  max-width: initial;
+                  padding: 0;
+                  margin: 0;
+                  overflow: initial;
+                  line-height: inherit;
+                  word-wrap: normal;
+                  background-color: transparent;
+                  border: 0
+            }
+
+            html body pre code:after,
+            html body pre code:before,
+            html body pre tt:after,
+            html body pre tt:before {
+                  content: normal
+            }
+
+            html body blockquote,
+            html body dl,
+            html body ol,
+            html body p,
+            html body pre,
+            html body ul {
+                  margin-top: 0;
+                  margin-bottom: 16px
+            }
+
+            html body kbd {
+                  color: #000;
+                  border: 1px solid #d6d6d6;
+                  border-bottom: 2px solid #c7c7c7;
+                  padding: 2px 4px;
+                  background-color: #f0f0f0;
+                  border-radius: 3px
+            }
+
+            @media print {
+                  html body {
+                        background-color: #fff
+                  }
+
+                  html body h1,
+                  html body h2,
+                  html body h3,
+                  html body h4,
+                  html body h5,
+                  html body h6 {
+                        color: #000;
+                        page-break-after: avoid
+                  }
+
+                  html body blockquote {
+                        color: #5c5c5c
+                  }
+
+                  html body pre {
+                        page-break-inside: avoid
+                  }
+
+                  html body table {
+                        display: table
+                  }
+
+                  html body img {
+                        display: block;
+                        max-width: 100%;
+                        max-height: 100%
+                  }
+
+                  html body code,
+                  html body pre {
+                        word-wrap: break-word;
+                        white-space: pre
+                  }
+            }
+
+            .markdown-preview {
+                  width: 100%;
+                  height: 100%;
+                  box-sizing: border-box
+            }
+
+            .markdown-preview ul {
+                  list-style: disc
+            }
+
+            .markdown-preview ul ul {
+                  list-style: circle
+            }
+
+            .markdown-preview ul ul ul {
+                  list-style: square
+            }
+
+            .markdown-preview ol {
+                  list-style: decimal
+            }
+
+            .markdown-preview ol ol,
+            .markdown-preview ul ol {
+                  list-style-type: lower-roman
+            }
+
+            .markdown-preview ol ol ol,
+            .markdown-preview ol ul ol,
+            .markdown-preview ul ol ol,
+            .markdown-preview ul ul ol {
+                  list-style-type: lower-alpha
+            }
+
+            .markdown-preview .newpage,
+            .markdown-preview .pagebreak {
+                  page-break-before: always
+            }
+
+            .markdown-preview pre.line-numbers {
+                  position: relative;
+                  padding-left: 3.8em;
+                  counter-reset: linenumber
+            }
+
+            .markdown-preview pre.line-numbers>code {
+                  position: relative
+            }
+
+            .markdown-preview pre.line-numbers .line-numbers-rows {
+                  position: absolute;
+                  pointer-events: none;
+                  top: 1em;
+                  font-size: 100%;
+                  left: 0;
+                  width: 3em;
+                  letter-spacing: -1px;
+                  border-right: 1px solid #999;
+                  -webkit-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none
+            }
+
+            .markdown-preview pre.line-numbers .line-numbers-rows>span {
+                  pointer-events: none;
+                  display: block;
+                  counter-increment: linenumber
+            }
+
+            .markdown-preview pre.line-numbers .line-numbers-rows>span:before {
+                  content: counter(linenumber);
+                  color: #999;
+                  display: block;
+                  padding-right: .8em;
+                  text-align: right
+            }
+
+            .markdown-preview .mathjax-exps .MathJax_Display {
+                  text-align: center !important
+            }
+
+            .markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group {
+                  display: none
+            }
+
+            .markdown-preview:not([data-for=preview]) .code-chunk .status {
+                  display: none
+            }
+
+            .markdown-preview:not([data-for=preview]) .code-chunk .output-div {
+                  margin-bottom: 16px
+            }
+
+            .markdown-preview .md-toc {
+                  padding: 0
+            }
+
+            .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
+                  display: inline;
+                  padding: .25rem 0
+            }
+
+            .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
+            .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
+                  display: inline
+            }
+
+            .markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+                  font-weight: 800
+            }
+
+            .scrollbar-style::-webkit-scrollbar {
+                  width: 8px
+            }
+
+            .scrollbar-style::-webkit-scrollbar-track {
+                  border-radius: 10px;
+                  background-color: transparent
+            }
+
+            .scrollbar-style::-webkit-scrollbar-thumb {
+                  border-radius: 5px;
+                  background-color: rgba(150, 150, 150, .66);
+                  border: 4px solid rgba(150, 150, 150, .66);
+                  background-clip: content-box
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]) {
+                  position: relative;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  margin: 0;
+                  padding: 0;
+                  overflow: auto
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                  position: relative;
+                  top: 0;
+                  min-height: 100vh
+            }
+
+            @media screen and (min-width:914px) {
+                  html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                        padding: 2em calc(50% - 457px + 2em)
+                  }
+            }
+
+            @media screen and (max-width:914px) {
+                  html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                        padding: 2em
+                  }
+            }
+
+            @media screen and (max-width:450px) {
+                  html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                        font-size: 14px !important;
+                        padding: 1em
+                  }
+            }
+
+            @media print {
+                  html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+                        display: none
+                  }
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+                  position: fixed;
+                  bottom: 8px;
+                  left: 8px;
+                  font-size: 28px;
+                  cursor: pointer;
+                  color: inherit;
+                  z-index: 99;
+                  width: 32px;
+                  text-align: center;
+                  opacity: .4
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
+                  opacity: 1
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 300px;
+                  height: 100%;
+                  padding: 32px 0 48px 0;
+                  font-size: 14px;
+                  box-shadow: 0 0 4px rgba(150, 150, 150, .33);
+                  box-sizing: border-box;
+                  overflow: auto;
+                  background-color: inherit
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar {
+                  width: 8px
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track {
+                  border-radius: 10px;
+                  background-color: transparent
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb {
+                  border-radius: 5px;
+                  background-color: rgba(150, 150, 150, .66);
+                  border: 4px solid rgba(150, 150, 150, .66);
+                  background-clip: content-box
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
+                  text-decoration: none
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc {
+                  padding: 0 16px
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link {
+                  display: inline;
+                  padding: .25rem 0
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p {
+                  display: inline
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+                  font-weight: 800
+            }
+
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                  left: 300px;
+                  width: calc(100% - 300px);
+                  padding: 2em calc(50% - 457px - 300px / 2);
+                  margin: 0;
+                  box-sizing: border-box
+            }
+
+            @media screen and (max-width:1274px) {
+                  html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                        padding: 2em
+                  }
+            }
+
+            @media screen and (max-width:450px) {
+                  html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                        width: 100%
+                  }
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+                  left: 50%;
+                  transform: translateX(-50%)
+            }
+
+            html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+                  display: none
+            }
+
+            /* Please visit the URL below for more information: */
+            /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+      </style>
+      <!-- The content below will be included at the end of the <head> element. -->
+      <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                  // your code here
+            });
+      </script>
+</head>
+
+<body for="html-export">
+
+
+      <div class="crossnote markdown-preview  ">
+
+            <p><a href="https://when1024.github.io/when/read/index.html">返回</a></p>
+            <h1 id="center笑傲江湖center">
+                  <center>笑傲江湖</center>
+            </h1>
+            <center>作者：金庸</center>
+            <h2 id="笑傲江湖简介">《笑傲江湖》简介 </h2>
+            <p>《笑傲江湖》是中国现代作家金庸创作的一部长篇武侠小说，1967年开始创作并连载于《明报》，1969年完成。这部小说通过叙述华山派大弟子令狐冲的江湖经历，反映了武林各派争霸夺权的历程。作品没有设置时代背景，“类似的情景可以发生在任何朝代”，折射出中国人独特的政治斗争状态，同时也表露出对这种争斗的哀叹，具有一定的政治寓意。小说情节跌宕起伏，波谲云诡，人物形象个性鲜明，生动可感。
+            </p>
+            <h2 id="笑傲江湖情节梗概">《笑傲江湖》情节梗概 </h2>
+            <p>《笑傲江湖》全书共四十章，其主要情节概括如下。</p>
+            <p>福建林远图以七十二路辟邪剑法称雄武林，创立福威镖局，驰骋江湖。远图死后，子孙无能，四方豪杰纷纷觊觎辟邪剑谱。福威镖局总镖头林震南一门被青城派屠戮殆尽。遗孤林平之拜投华山派掌门君子剑岳不群门下，一心学艺报仇。华山派首徒令狐冲自幼失怙，与岳不群独女岳灵珊青梅竹马，情好甚笃。他因豪放不羁，违反门规，被罚思过崖面壁一载。林平之入门，岳灵珊乃移情于林。令狐冲失恋，无意间得窥思过崖后暗洞中石刻，尽悉五岳剑派剑术秘诀，后蒙华山剑宗前辈——隐士风清扬传授独孤九剑，从此剑术通神。
+            </p>
+            <p>其时武林之中，既有正邪之判，复存门户之别，少林、武当、青城、五岳自诩正教，与被称为魔教的日月神教冤冤相报，誓不两立。五岳剑派名虽一体，实存芥蒂。嵩山掌门左冷禅野心勃勃，意欲吞并五岳，称霸江湖，自恃盟主身份，凌驾四岳掌门，挑拨华山剑宗争夺掌门之位，岳不群原属气宗，剑、气二宗素不相和，不群率本门弟子外出避祸，遭左道之士埋伏，俱被擒获。赖令狐冲以独孤剑法刺瞎对方十五人双目，化险为夷，然岳不群从此怀疑令狐冲。
+            </p>
+            <p>先是令狐冲因行侠仗义，舍身救人，身负重伤，旋经江湖怪人“桃谷六仙”滥施救冶，伤势益重。及岳不群等至洛阳与林平之外祖王元霸家，令狐冲因怀有笑傲江湖曲谱复见疑于元霸父子，以为曲谱即林家祖传之“辟邪剑谱”。因曲谱深奥难解，令狐亦百口难辩，乃质诸洛阳隐士绿竹翁，并因而结识绿竹之姑，鉴定确系曲谱，释众之疑。绿竹之姑同情令狐遭遇，授以琴曲《清心普善咒》，助其疗伤，令狐于失恋遭嫉之余，得人眷顾，甚感欣慰，临去依依不舍，然始终未睹其面。岳不群等离洛赴闽，一路之上，江湖左道帮派，踵武相接，馈赠奇珍秘药，来助令狐冲疗伤。口称令狐公子，礼敬有加，唯置岳不群于不顾。后于五霸冈聚众数千，掳劫名医，为令狐诊治。令狐既不明所以，岳不群更猜忌重重，终弃之而去。群豪至晚皆散，令狐独处冈上，落拓无依，百无聊赖。忽闻琴声出于草舍，知绿竹之姑亦在冈上，心下窃喜。问答之际，少林派辛国梁等上冈搜查魔教余党，令狐力阻辛等入草棚凌欺绿竹之姑，再受重创。与姑下冈避难，辛国梁等复来寻仇，绿竹之姑力杀四人，亦受重伤。令狐负之落荒而走，及涧水倒映其面，始知绿竹之姑竟为妙龄少女，该女羞赧不胜，自称盈盈。经此变故，二人互生情愫，然令狐以其行事怪异，颇存疑惑。
+            </p>
+            <p>一日，令狐伤重昏厥，及醒已身处少林寺中，方证方丈许以上乘内功“易筋经”救其性命，然须改投少林门下。令狐不肯背师，方证乃出岳不群手书相示，内云因令狐结交左道，已将其逐出门墙，武林正派人人得而诛之。令狐睹此，万念俱灰，觉天地之大，竟无容身之处，一股倔强之气油然而生，乃婉辞方证，惨然离去，途遇一白衣老者力敌正邪二教数百人，凛然不惧。令狐心中钦仰，拔剑相助，脱困之后，遂成生死之交。老者名叫向问天，为人豪爽洒脱，闻令狐身患不治之疾，乃引其赴杭州梅庄，允荐一人医治，令狐悉遵向问天安排。
+            </p>
+            <p>向问天与令狐冲二人先谒“江南四友”。向问天投其所好，以琴棋书画珍品诱“四友”与令狐比剑赌胜，“四友”不敌，然为珍品所诱，遂引令狐由地道入一囚室，使被囚之人与令狐赌斗。其人长身黑髯，武功超卓，虽不能胜令狐独孤九剑，然振膈一呼，令狐当即昏厥。及苏醒，已身陷囚室之中，于其间始末因由，懵无所知，无意中发现身下石板刻有内功口诀，乃照之修习，一月后，竟觉伤病爽然若失，旋以李代桃僵之法，赚得“四友之一”黑白子入室，换其衣帽逃出。值向问天并先前被囚之黑髯大汉前来救援，制服“四友”。乃知被囚之人竟原魔教教主任我行，向为其属下左使，因东方不败篡夺教主之位，囚任我行于梅庄，令“四友”看守，向不满东方诛除异己，乃穷十二年之力，探得任我行被囚之所，方欲施救，为东方发现，四出追捕，得与令狐邂逅。令狐所习之内功口诀，即任我行独创能于打斗之际吸人内力之“吸星大法”，其法世间传人仅令狐冲而已。然任我行云吸星大法后患无穷，劝令狐冲入教，方能授其化解之法，令狐不为要挟所动，谢绝而去。
+            </p>
+            <p>令狐冲独行仙霞岭，乔装泉州参将吴天德，恰逢恒山弟子遇魔教埋伏，乃拔剑相助，击退强敌。后于廿八铺救出被魔教掳劫之恒山女尼，领队师太定静苦战力竭而亡。遗言嘱令狐护送门下弟子赴福建水月庵。令狐遵嘱将群尼安顿，即往福威镖局寻师，见岳灵珊与林平之于镖局查找辟邪剑谱，被蒙面二人点倒，二人寻出一红色袈裟，逾墙而出。令狐寻踪追赶，杀死二人，夺回袈裟，因上有字迹，意必为辟邪剑谱，急欲呈送岳不群，终以负伤昏倒于镖局门外。及苏醒，令狐冲得见师父母及同门兄弟，大慰情怀，然袈裟已不见，遂被不群诬指其偷窃辟邪剑谱，刺伤林平之，杀死师弟英白罗，令狐力白其冤，不获谅解。几死于不群掌下，赖师母佑护，逃离镖局。值恒山群尼接掌门定闲信鸽传书告急，令狐乃率众前往铸剑谷驰援，救出定闲、定逸，二人皆已负伤，审讯俘虏，始知恒山弟子屡次中伏及定静死难，皆嵩山派伪装魔教所为，盖欲迫胁恒山派听其驱使，进而吞并华山、衡山、泰山三派。既得悉嵩山派阴谋，令狐乃护送恒山群尼乘舟返回北岳。舟次夏口，令狐登岸饮酒，遇衡山掌门莫大先生。莫告以盈盈乃魔教教主任我行之女，当日为救令狐之伤，只身背负令狐入少林寺，甘愿舍身乞方证大师以“易筋经”救令狐之命，至今幽囚寺中，言下颇责令狐负义。令狐闻此如大梦初觉，始知当日群豪请医送药皆受任盈盈指使，发誓救其出寺，以报再生之恩。即让莫大护送恒山群尼，只身奔赴少林。
+            </p>
+            <p>江湖左道帮派，亦结队赴少林营救盈盈。为使双方免于流血，定闲、定逸自告奋勇，前往少林说项，乞方证释放盈盈，双方罢战，令狐率群豪继至少林，然寺内已空，仅定闲、定逸在内，定逸已死，定闲亦受人暗算奄奄垂毙，遗言请令狐接掌恒山门户，旋即逝去。令狐发誓报仇。少林寺已被正教各派围困，令狐率众几番冲突，不能突围。幸由“桃谷六仙”发现寺中地道，群豪得以脱困。令狐辞别大众，再入少林，窥见任我行父女及向问天与正教各派掌门，正唇枪舌剑，争执不下。方证欲消饵仇恨，劝任我行等皈依佛门，武当冲虚道长则提出比武以决三人去留。众可其议，乃由方证、左冷禅、冲虚出手。任我行狡智先胜方证，后中左冷禅暗算，负于左。而令狐早已被任发现，任我行使其与冲虚比剑，冲虚自认不敌。方证乃如约放任等下山，而岳不群忽邀令狐较量，令狐不忍伤师，只守不攻，岳则明知不敌，仍纠缠不休，甚而以当日令狐与灵珊自创之“冲灵剑法”乱其心神，令狐终以救盈盈心切，误伤岳不群。
+            </p>
+            <p>四人出寺，任我行再诱令狐加盟魔教，且愿将盈盈许配，令狐以其有要挟之意，断然拒绝。径赴恒山践其诺言，接任掌门，盈盈因恒山一派尽皆女弟子，恐有损令狐声誉，亲率大批江湖豪士投于恒山门下。方证、冲虚推重令狐为人，亦来祝贺，并与其计议抵制左冷禅称霸武林之策。东方不败遣部下偷袭悬空寺，包围方证等三人，任盈盈解救，制伏魔教群敌。
+            </p>
+            <p>令狐与盈盈辞出，会同任我行、向问天乔装入魔教总坛——黑木崖，杀死东方不败，任我行乃得重登教主之位。令狐不满任我行威福自用，不辞而别。值左冷禅举行五岳并派大会，令狐率恒山弟子齐赴嵩山，左事先策划周密，挑动泰山派内讧，诛除掌门天门道人，自认已稳坐五岳派掌门之位。
+            </p>
+            <p>盈盈乔装混入恒山派人群，以传音之术唆使“桃谷六仙”搅乱会场，议定比剑以定掌门。岳不群则使灵珊出场，分别以诸派剑法力胜泰山玉玑子、玉磐子及衡山掌门莫大先生。时灵珊已与林平之成婚，令狐见灵珊忽忽不乐，乃登场以“冲灵剑法”与之对舞，终至于自伤。而岳不群突然发难，以如鬼如魅之辟邪剑法刺瞎左冷禅双目，夺得五岳派掌门。群雄散讫，令狐冲与盈盈相聚，二人几经生死患难，终成知心情侣。
+            </p>
+            <p>下山途中，二人目睹林平之夫妇口角及平之以辟邪剑法屠戮青城派弟子之残酷，不解林平之何以亦能习练辟邪剑法，因尾随其后，复亲聆平之述说岳不群如何诱其入门，如何以女儿为钓饵，如何攫取剑谱嫁祸令狐冲，如何杀死英白罗，砍伤平之以灭口，如何自宫练剑掩人耳目种种阴谋险恶，令狐得知，始恍然大悟。继知平之以偶然之机缘得见辟邪剑谱并自宫习剑以图报复之始未嗣后。平之因双目已盲，欲投左冷禅，为明心迹，刺死岳灵珊，令狐与盈盈安葬灵珊。
+            </p>
+            <p>岳不群以华山思过崖洞内石刻武功秘诀诱引诸派高手入观，旋用巨石封洞，欲尽诛异己，令狐与盈盈亦陷洞中，颇历凶险，几遭岳不群毒手，赖恒山女尼仪琳刺死岳不群，始得脱困。任我行倾巢来攻，欲称霸五岳，胁迫令狐入教，令狐凛然不屈。五岳剑派以自相残杀，纷纷零落。任我行终因心力交瘁而亡。令狐与盈盈终成眷属，正邪双方亦因此化干戈为玉帛。
+            </p>
+            <h2 id="笑傲江湖创作背景">《笑傲江湖》创作背景 </h2>
+            <p>《笑傲江湖》自1967年4月20日至1969年10月12日连载于《明报》。“笑傲江湖”语出吴承恩《西游记》第九回“袁守诚妙算无私曲，老龙王拙计犯天条”中渔夫的《西江月》词中一句“得来烹煮味偏浓，笑傲江湖打哄”。
+            </p>
+            <p>《笑傲江湖》的写作从1967年开始。当时的中国，“文化大革命”正在高潮。“文化大革命”从1966年开始，1966年至1968年这三年是高潮期；或者根据一部分学者的看法，这三年是“真正的文革”。“文革”不仅在中国大陆进行，也波及到香港。持右派立场的《明报》受到左派的围攻，而金庸一直就关心着天下大事，关注着中国的政治风云，所以他把当时对“文革”的思考，自觉不自觉地就融入了自己的小说创作。其实与此同时，金庸每天写的社评，本来就在一刻不停地评论着中国的现实，特别是他对“文革”中政治局势的判断每每都是出人意表，结果也被证明具有很高的准确性。
+            </p>
+            <p>此书是在“文革”时期写的，但它并不是一部简单的“影射文学”，而是受“文革”启发，以生动的艺术画面浓缩了一部中国政治斗争史。</p>
+            <h2 id="作者简介">作者简介 </h2>
+            <p>金庸（1924年3月10日—2018年10月30日），本名查良镛，浙江省海宁市人，祖籍江西省婺源县浙源乡凤山村，1948年移居香港。当代武侠小说作家、新闻学家、企业家、政治评论家、社会活动家，被誉为“香港四大才子”之一，与古龙、梁羽生、温瑞安并称为“中国武侠小说四大宗师”。
+            </p>
+            <p>1944年，考入重庆中央政治大学外交系。1946年秋，进入上海《大公报》任国际电讯翻译。1948年，毕业于上海东吴大学法学院，并被调往《大公报》香港分社。1952年调入《新晚报》编辑副刊，并写出《绝代佳人》《兰花花》等电影剧本。1959年，金庸等人于香港创办《明报》。1985年起，历任香港特别行政区基本法起草委员会委员、政治体制小组负责人之一，基本法咨询委员会执行委员会委员，以及香港特别行政区筹备委员会委员。1994年，受聘北京大学名誉教授。2000年，获得大紫荆勋章。2007年，出任香港中文大学文学院荣誉教授。2009年9月，被聘为中国作协第七届全国委员会名誉副主席；同年荣获2008影响世界华人终身成就奖。2010年，获得剑桥大学哲学博士学位。
+            </p>
+            <p>2018年10月30日，在香港逝世，享年94岁。</p>
+            <h2 id="笑傲江湖目录">《笑傲江湖》目录 </h2>
+            <p>01 <a href="01.html">一 灭门</a><br>
+                  02 <a href="02.html">二 聆秘</a><br>
+                  03 <a href="03.html">三 救难</a><br>
+                  04 <a href="04.html">四 坐斗</a><br>
+                  05 <a href="05.html">五 治伤</a><br>
+                  06 <a href="06.html">六 洗手</a><br>
+                  07 <a href="07.html">七 授谱</a><br>
+                  08 <a href="08.html">八 面壁</a><br>
+                  09 <a href="09.html">九 邀客</a><br>
+                  10 <a href="10.html">十 传剑</a><br>
+                  11 <a href="11.html">十一 聚气</a><br>
+                  12 <a href="12.html">十二 围攻</a><br>
+                  13 <a href="13.html">十三 学琴</a><br>
+                  14 <a href="14.html">十四 论杯</a><br>
+                  15 <a href="15.html">十五 灌药</a><br>
+                  16 <a href="16.html">十六 注血</a><br>
+                  17 <a href="17.html">十七 倾心</a><br>
+                  18 <a href="18.html">十八 联手</a><br>
+                  19 <a href="19.html">十九 打赌</a><br>
+                  20 <a href="20.html">二十 探狱</a><br>
+                  21 <a href="21.html">二十一 囚居</a><br>
+                  22 <a href="22.html">二十二 脱困</a><br>
+                  23 <a href="23.html">二十三 伏击</a><br>
+                  24 <a href="24.html">二十四 蒙冤</a><br>
+                  25 <a href="25.html">二十五 闻讯</a><br>
+                  26 <a href="26.html">二十六 围寺</a><br>
+                  27 <a href="27.html">二十七 三战</a><br>
+                  28 <a href="28.html">二十八 积雪</a><br>
+                  29 <a href="29.html">二十九 掌门</a><br>
+                  30 <a href="30.html">三十 密议</a><br>
+                  31 <a href="31.html">三十一 绣花</a><br>
+                  32 <a href="32.html">三十二 并派</a><br>
+                  33 <a href="33.html">三十三 比剑</a><br>
+                  34 <a href="34.html">三十四 夺帅</a><br>
+                  35 <a href="35.html">三十五 复仇</a><br>
+                  36 <a href="36.html">三十六 伤逝</a><br>
+                  37 <a href="37.html">三十七 迫娶</a><br>
+                  38 <a href="38.html">三十八 聚歼</a><br>
+                  39 <a href="39.html">三十九 拒盟</a><br>
+                  40 <a href="40.html">四十 曲谐</a><br>
+                  41 <a href="41.html">后记</a></p>
+            <hr>
+            <p><a href="01.html"></a></p>
+            <center style="font-size:40px"><a href="01.html">开始阅读</a></center>
+            <p></p>
+
+      </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
