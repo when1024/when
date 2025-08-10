@@ -1,0 +1,218 @@
+<!DOCTYPE html><html><head>
+      <title>反假币试题03</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      ::selection {background-color: #cdf3e0;}code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="center反假币试题03-第五套人民币center"><center>反假币试题03 第五套人民币</center> </h1>
+<p>1.[单选题]2005年版第五套人民币纸币调整了对隐形数字公众防伪特征的（  ）。<br>
+A.票面位置<br>
+B.字体<br>
+C.观察角度</p>
+<p>正确答案：C</p>
+<br>
+<p>2.[单选题]透光观察2015年版第五套人民币100元上应用的光变镂空开窗安全线时，可见安全线中（  ）。<br>
+A.印刷有黑色文字100<br>
+B.印刷有正反交替排列的黑色文字100<br>
+C.正向排列的镂空文字100<br>
+D.正反交替排列的镂空文字100</p>
+<p>正确答案：D</p>
+<br>
+<p>3.[单选题]2005版第五套人民币10元、5元纸币对（  ）公众防伪特征进行了调整。<br>
+A.雕刻凹版印刷<br>
+B.隐形数字<br>
+C.全息磁性开窗安全线<br>
+D.手工雕刻头像</p>
+<p>正确答案：B</p>
+<br>
+<p>4.[单选题]第五套人民币1元纸币背面的主景图案是（  ）。<br>
+A.泰山<br>
+B.西湖<br>
+C.桂林山水</p>
+<p>正确答案：B</p>
+<br>
+<p>5.[单选题]2019年版第五套人民币20元的正面右侧的安全线具有（  ）特征。<br>
+A.红外<br>
+B.全息<br>
+C.磁性<br>
+D.光变</p>
+<p>正确答案：D</p>
+<br>
+<p>6.[单选题]第五套人民币2005年版10元纸币正面“10”字样，采用雕刻凹印，（  ）两种墨色对接完整。<br>
+A.蓝色和绿色<br>
+B.浅棕和蓝黑<br>
+C.红色和紫色</p>
+<p>正确答案：B</p>
+<br>
+<p>7.[单选题]1999版第五套人民币20元的安全线具有（  ）特征。<br>
+A.红外<br>
+B.全息<br>
+C.磁性<br>
+D.光变</p>
+<p>正确答案：C</p>
+<br>
+<p>8.[单选题]根据观察需要2015版第五套人民币100元上应用的光变镂空开窗安全线位于（  ）。<br>
+A.票面正面左侧<br>
+B.票面背面左侧<br>
+C.票面正面右侧<br>
+D.票面背面右侧</p>
+<p>正确答案：C</p>
+<br>
+<p>9.[单选题]2005版第五套人民币纸张防伪特征采用了（  ）。<br>
+A.全埋式安全线<br>
+B.明暗相间式安全线<br>
+C.全息磁性开窗式安全线</p>
+<p>正确答案：C</p>
+<br>
+<p>10.[单选题]第五套人民币1元是采用（  ）方式印刷的主景图案。<br>
+A.凹印<br>
+B.胶印<br>
+C.丝印<br>
+D.凸印</p>
+<p>正确答案：A</p>
+<br>
+<p>11.[多选题]下列对2015年版第五套人民币100元纸币上采用的雕刻凹印防伪特征描述错误的是（  ）。<br>
+A.票面背面仅人民大会堂图案应用了雕刻凹印防伪特征<br>
+B.用手指触摸该特征，具有明显的凹凸感<br>
+C.票面正面中下部的团花图案为雕刻凹印印刷<br>
+D.票面正面右上角使用了雕刻凹印印刷隐形数字</p>
+<p>正确答案：AD</p>
+<br>
+<p>12.[多选题]2015年版第五套人民币100元纸币采用雕刻凹印，它的主要特点是（  ）。<br>
+A.采用胶印方式印刷雕刻凹印图文<br>
+B.用手触摸，具有明显的凹凸感<br>
+C.光彩光变数字、 光变镂空开窗安全线均采用了雕刻凹印印刷<br>
+D.票面正面右侧的毛泽东头像 国徽等部位均采用了雕刻凹印印刷</p>
+<p>正确答案：BD</p>
+<br>
+<p>13.[多选题]2015年版第五套人民币100元纸币采用了光彩光变数字防伪特征，下列表述错误的有（  ）。<br>
+A.该特征位于票面正面右侧<br>
+B.移动倾斜观察数字在金色和绿色之间交替变化<br>
+C.移动倾斜观察可见一条亮光带上下滚动<br>
+D.该特征采用胶印印刷方式</p>
+<p>正确答案：AD</p>
+<br>
+<p>14.[多选题]2015年版第五套人民币100元纸币采用的光变镂空开窗安全线的特点是（  ）。<br>
+A.一条全埋于纸张中的安全线<br>
+B.移动倾斜观察，可见安全线在品红和绿色的颜色间变化<br>
+C.透光观察，可见安全线中正反交替排列的镂空文字<br>
+D.该安全线有磁性</p>
+<p>正确答案：BC</p>
+<br>
+<p>15.[多选题]关于2015年版第五套人民币100元纸币应用的全埋安全线，下列说法错误的是（  ）<br>
+A.位于票面正面中部<br>
+B.透光观察可见安全线中镂空的人民币符号<br>
+C.平视观察可见具有动感效果的数字100上下浮动<br>
+D.具有磁性，但不能供设备读取以判定该特征的真伪</p>
+<p>正确答案：BCD</p>
+<br>
+<p>16.[多选题]第五套人民币各券别的背面图案有_______。<br>
+A.井冈山<br>
+B.泰山<br>
+C.布达拉宫<br>
+D.黄山</p>
+<p>正确答案：BC</p>
+<br>
+<p>17.[多选题]2005年版第五套人民币100元、50元纸币的公众防伪特征调整了（  ）的位置。<br>
+A.隐形数字<br>
+B.盲文标记<br>
+C.光变油墨数字<br>
+D.胶印对印图案</p>
+<p>正确答案：CD</p>
+<br>
+<p>18.[多选题]1999年版第五套人民币100元的安全线具有（  ）的特征。<br>
+A.磁性<br>
+B.开窗<br>
+C.全息<br>
+D.缩微文字</p>
+<p>正确答案：AD</p>
+<br>
+<p>19.[多选题]2015年版100元纸币较2005年版100元纸币增加了哪些防伪特征?（  ）<br>
+A.光彩光变数字<br>
+B.光变油墨数字<br>
+C.光变镂空开窗安全线<br>
+D.有色荧光竖号码</p>
+<p>正确答案：ACD</p>
+<br>
+<p>20.[多选题]2005年版第五套人民币（  ）纸币采用背开式全息磁性开窗安全线。<br>
+A.100元<br>
+B.50元<br>
+C.20元<br>
+D.10元<br>
+E.5元</p>
+<p>正确答案：AB</p>
+<br>
+<p>21.[判断题]第五套人民币100元、50元纸币采用了立体感很强的固定人像水印，该水印位于票面正面左侧空白处。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：正确</p>
+<br>
+<p>22.[判断题]第五套人民币50元纸币正面主景是毛泽东头像，背面主景是长江三峡图案。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：错误</p>
+<br>
+<p>23.[判断题]第五套人民币5角硬币背面主景图案是荷花。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：正确</p>
+<br>
+<p>24.[判断题]第五套人民币2005年版100元、50元纸币与1999年版100元、50元纸币比较，隐形数字的调整是指对观察角度的调整。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：正确</p>
+<br>
+<p>25.[判断题]第五套人民币5元券的水印图案是水仙花。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：正确</p>
+<br>
+<p>26.[判断题]第五套人民币正面的装饰花纹精选了具有中国传统历史文化特色和民族特色，并有一定经典意义的纹饰。100元采用了中国漆器的花纹。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：正确</p>
+<br>
+<p>27.[判断题]第五套人民币纸币隐形数字位于钞票正面左上方。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：错误</p>
+<br>
+<p>28.[判断题]第五套人民币纸币正面均是手工雕刻凹版印刷的毛泽东头像。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：正确</p>
+<br>
+<p>29.[判断题]通过自然光下平视观察，可清晰分辨2015年版第五套人民币100元纸币上应用的全埋安全线的真伪。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：错误</p>
+<br>
+<p>30.[判断题]透光观察，可见2015年版第五套人民币100元纸币上应用的全埋安全线中具有镂空的英文字母RMB和数字100。<br>
+A.正确<br>
+B.错误</p>
+<p>正确答案：错误</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
