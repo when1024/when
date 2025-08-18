@@ -1,0 +1,279 @@
+<!DOCTYPE html><html><head>
+      <title>反假币试题19</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      ::selection {background-color: #cdf3e0;}code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="center反假币试题19-相关规章制度center"><center>反假币试题19 相关规章制度</center> </h1>
+<p>1.[判断题]20元及以上面额必须全额机械清分，10元及以下券别如不适合使用机械清分，可以组织手工清分。<br>
+A.正确<br>
+B.错误</p>
+<br>
+<p>正确答案：错误</p>
+<br>
+<br>
+<p>2.[判断题]5元及以下券别如不适合使用机械清分，可以组织手工清分。<br>
+A.正确<br>
+B.错误</p>
+<br>
+<p>正确答案：正确</p>
+<br>
+<br>
+<p>3.[单选题]查询申请表、（  ）和查询结果通知书应自成类别，以业务发生时间先后为序，按年装订，保存期为2年。<br>
+A.申请人申请资料<br>
+B.再查询申请表<br>
+C.申请书</p>
+<br>
+<p>正确答案：B</p>
+<br>
+<br>
+<p>4.[单选题]银行业金融机构涉假冠字号码查询受理单位对于提供证明材料不完备的查询申请，应（  ）。<br>
+A.当面告知查询人补齐相关材料<br>
+B.正常受理查询申请<br>
+C.收取相关费用给予查询<br>
+D.直接拒绝查询人申请</p>
+<br>
+<p>正确答案：A</p>
+<br>
+<br>
+<p>5.[单选题]《中国人民银行办公厅关于银行业金融机构对外误付假币专项治理工作指导意见》（银办发（2013）14号）中要求银行业金融机构采集到的冠字号码数据信息保存时间是：（  ）。<br>
+A.至少保存3个月<br>
+B.至少保存6个月<br>
+C.至少保存1个月<br>
+D.至少保存12个月</p>
+<br>
+<p>正确答案：A</p>
+<br>
+<br>
+<p>6.[单选题]冠字号码再查询结果应通过（  ）告知查询人。<br>
+A.查询结果通知书<br>
+B.再查询结果通知书<br>
+C.电话</p>
+<br>
+<p>正确答案：A</p>
+<br>
+<br>
+<p>7.[单选题]银行业金融机构涉假冠字号码受理单位应向查询申请人以（  ）形式反馈查询结果。<br>
+A.口头通知<br>
+B.填制《人民币冠字号码查询结果通知书》<br>
+C.邮件通知<br>
+D.电话通知</p>
+<br>
+<p>正确答案：B</p>
+<br>
+<br>
+<p>8.[单选题]冠字号码查询人向银行业金融机构提起涉假币纠纷冠字号码查询申请超时的，查询受理单位（  ）。<br>
+A.不予受理查询申请<br>
+B.收取相关费用给予查询<br>
+C.必须受理查询申请<br>
+D.向上级申请受理查询</p>
+<br>
+<p>正确答案：A</p>
+<br>
+<br>
+<p>9.[单选题]对于存储的冠字号码能与取款人取款业务信息关联的，查询受理单位在履行查询程序后，应在《查询结果通知书》中列示该笔取款（  ）冠字号码及其冠字号码图片。<br>
+A.部分<br>
+B.所有<br>
+C.前十个</p>
+<br>
+<p>正确答案：B</p>
+<br>
+<br>
+<p>10.[单选题]金融机构在冠字号码查询系统建成以前，必须按照相关要求，按时保证（  ）。<br>
+A.后台查询<br>
+B.实时查询<br>
+C.单机查询</p>
+<br>
+<p>正确答案：C</p>
+<br>
+<br>
+<p>11.[单选题]现金清分包括机械清分和（  ）。<br>
+A.设备清分<br>
+B.手工清分<br>
+C.人工分类</p>
+<br>
+<p>正确答案：B</p>
+<br>
+<br>
+<p>12.[单选题]银行业金融机构应组织对本机构所辖网点前一日上传的冠字号码信息的（  ）进行核查。<br>
+A.有效性<br>
+B.及时性<br>
+C.完整性</p>
+<br>
+<p>正确答案：C</p>
+<br>
+<br>
+<p>13.[单选题]申请冠字号码查询不需要提供的资料为（  ）。<br>
+A.有效证件<br>
+B.假币实物或《假币收缴凭证》<br>
+C.单位介绍信</p>
+<br>
+<p>正确答案：C</p>
+<br>
+<br>
+<p>14.[单选题]本机或通过冠字号码查询系统（软件），可实现取款业务信息与冠字号码记录的关联，能在假币纠纷中向客户提供取出现钞的冠字号码（文本及图像信息），且提供的冠字号码与现钞能一一对应，应张贴（  ）。<br>
+A.黄标<br>
+B.红标<br>
+C.蓝标</p>
+<br>
+<p>正确答案：C</p>
+<br>
+<br>
+<p>15.[单选题]现金清分包括（  ）和手工清分。<br>
+A.设备清分<br>
+B.点钞机清分<br>
+C.机械清分</p>
+<br>
+<p>正确答案：C</p>
+<br>
+<br>
+<p>16.[单选题]采取代理行后台清分，本行网点记录、存储方式的，冠字号码的检索由（  ）受理处置。<br>
+A.记录网点<br>
+B.代理行<br>
+C.A和B</p>
+<br>
+<p>正确答案：A</p>
+<br>
+<br>
+<p>17.[单选题]按照《银行业金融机构人民币冠字号码查询解决涉假纠纷工作指引（试行）》，查询人委托第三方代理查询的，应提供的身份证件为（  ）。<br>
+A.仅查询人的有效身份证件即可<br>
+B.查询人<span style="color:red">或</span>委托人的有效身份证件<br>
+C.查询人<span style="color:red">和</span>委托人的有效身份证件</p>
+<br>
+<p>正确答案：C</p>
+<br>
+<br>
+<p>18.[多选题]全额清分是指银行（  ）的人民币纸币现金券别经过清分。<br>
+A.柜台支付<br>
+B.自动取款机支付<br>
+C.自动存取款一体机支付<br>
+D.缴存人民银行发行库回笼券</p>
+<br>
+<p>正确答案：ABCD</p>
+<br>
+<br>
+<p>19.[多选题]银行业金融机构应结合实际情况，参考以下（  ）方式防止冠字号码数据丢失。<br>
+A.在清分环节设置校验程序，对清分的每批次纸币张数与冠字号码记录条数进行校验<br>
+B.在清分机具开机时进行测试，并规定使用过程中的定期抽查频率<br>
+C.在清分机清分之后，逐张对记录的冠字号码信息与现金实物比对<br>
+D.柜员机加钞后取出若干张纸币后登录系统查询验证</p>
+<br>
+<p>正确答案：ABD</p>
+<br>
+<br>
+<p>20.[多选题]王先生接到某商业银行的电话通知：告知王先生申请的人民币冠字号码查询已经有结果了。经核查，没有发现王先生要求查询的冠字号码，因此这张假币不是该商业银行付出的，王先生不要再来银行了。该商业银行正确做法是（  ）。<br>
+A.因通过查询结果通知书告知查询人<br>
+B.应尽快详细描述查询过程，充分履行举证责任<br>
+C.应将查询结果通过人民银行告知查询人<br>
+D.应告知申请人在3个工作日内向有关机构申请再查询</p>
+<br>
+<p>正确答案：ABD</p>
+<br>
+<br>
+<p>21.[多选题]银行业金融机构冠字号码信息至少应该包括以下要素（  ）。<br>
+A.金融机构及其网点全称（金融机构代码）<br>
+B.业务类型（取款机、存取款一体机、柜台）<br>
+C.机具编号<br>
+D.记录日期、时间<br>
+E.币种、版别、币值</p>
+<br>
+<p>正确答案：ABCDE</p>
+<br>
+<br>
+<p>22.[多选题]银行业金融机构应组织开发与现金处理设备输出文件相匹配的冠字号码查询系统，并实现（  ）功能。<br>
+A.能导入本行、其他金融机构或社会化机构现金处理设备输出的FSN文件<br>
+B.能对记录的冠字号码数据进行精确查询和模糊查询<br>
+C.能按照人民银行或金融机构上级行的要求导出相应格式文件<br>
+D.能保持冠字号码信息至少1个月</p>
+<br>
+<p>正确答案：ABC</p>
+<br>
+<br>
+<p>23.[多选题]人民币冠字号码查询结果判定为付款行付出假币的，付款行应（  ）。<br>
+A.将假币退还给客户并全额赔付<br>
+B.按照规定收缴假币并全额赔付<br>
+C.假币已被其他金融机构收缴或公安机关没收，收回客户持有的《假币收缴凭证》或《假币没收收据》后予以全额赔付<br>
+D.假币已被其他金融机构收缴或公安机关没收，收回客户持有的《假币收缴凭证》或《假币没收收据》后予以双倍赔付</p>
+<br>
+<p>正确答案：BC</p>
+<br>
+<br>
+<p>24.[多选题]银行业金融机构冠字号码检索人员应当熟悉掌握各种方式记录、存储的冠字号码的检索。对（  ）等多来源的冠字号码记录及检索方法均应掌握。<br>
+A.本行清分中心清分<br>
+B.本网点清分<br>
+C.他行代理清分中心清分调入<br>
+D.金融机构相互取现调入<br>
+E.人民银行清分完整券调入</p>
+<br>
+<p>正确答案：ABCDE</p>
+<br>
+<br>
+<p>25.[多选题]以下（  ）券别可以申请进行冠字号码查询。<br>
+A.100元<br>
+B.50元<br>
+C.20元<br>
+D.10元</p>
+<br>
+<p>正确答案：AB</p>
+<br>
+<br>
+<p>26.[多选题]2014年6月日，某银行客户持一张疑似假币，护照和取款凭证到某银行网点投诉，称其2014年6月10日在该网点取款机中取出假币。接客户投诉后，网点柜员认定该疑似假币确认为假币，但网点声称，称持护照不能申请冠字号码查询，必须持本人身份证，且人民银行要求银行业金融机构不迟于2014年底实现取款机冠字号码查询，该网点取款机尚未升级，因此银行网点不予受理查询申请，该案例中违反相关规定的包括（  ）。<br>
+A.不予受理查询申请的，不应收缴，而应将假币实物退回原持有人<br>
+B.为保证假币实物安全，查询人和查询代理人持假币实物申请查询的，查询受理单位应比照《中国人民银行假币收缴、鉴定管理办法》关于假外币和假硬币的处理办法予以封存，暂不在纸币实物上加盖印章<br>
+C.银行业金融机构应不迟于2013年底实现取款机查询冠字号码，而不是2014年底实现<br>
+D.查询人可携带身份证，军官证，台胞证或护照等有效证件申请查询，不仅仅只是身份证</p>
+<br>
+<p>正确答案：BCD</p>
+<br>
+<br>
+<p>27.[判断题]查询申请表、再查询申请表和查询结果通知书应自成类别，以业务发生时间先后为序，按年装订，保存期为3年。<br>
+A.正确<br>
+B.错误</p>
+<br>
+<p>正确答案：错误</p>
+<br>
+<br>
+<p>28.[判断题]为方便消费者查询，原则上采用在业务发生网点查询的方式。<br>
+A.正确<br>
+B.错误</p>
+<br>
+<p>正确答案：正确</p>
+<br>
+<br>
+<p>29.[判断题]委托他行或社会清分机构情分后调入，由本行对外支付的现金，必须由本行记录、存储冠字号码，保证冠字号码可追溯查询。<br>
+A.正确<br>
+B.错误</p>
+<br>
+<p>正确答案：错误</p>
+<br>
+<br>
+<p>30.[判断题]已建成冠字号码查询系统的金融机构应于每个工作日营业结束后，将辖内各分支机构当日记录存储的冠字号码信息集中到地市分行或省分行统一管理。<br>
+A.正确<br>
+B.错误</p>
+<br>
+<p>正确答案：正确</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
