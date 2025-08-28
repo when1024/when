@@ -1,0 +1,1195 @@
+<!DOCTYPE html><html><head>
+      <title>反假币</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      ::selection {background-color: #cdf3e0;}code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="反假币">反假币 </h1>
+<h3 id="一-人民币特征">一、人民币特征 </h3>
+<br>
+<h4 id="一第四套人名币有2元面额-无20元面额">（一）第四套人名币（有2元面额、无20元面额） </h4>
+<p>（1）左侧防伪水印<br>
+毛泽东、工人、陕北农民。</p>
+<p>（2）安全线<br>
+1990版100元、50元有安全线。</p>
+<p>（3）凹凸感<br>
+1元双面胶印。雕刻头像。</p>
+<p>（4）凹印冠字号码<br>
+间隔颜色（100元红色、50元黑色、10元红色……）</p>
+<p>（5）无色荧光油墨<br>
+紫外线下有拼音和数字</p>
+<p>（6）磁性油墨<br>
+油墨有磁性</p>
+<br>
+<h4 id="二第五套人民币有20元面额-无2元面额">（二）第五套人民币（有20元面额、无2元面额） </h4>
+<p>1.一般正面特征</p>
+<p>（1）正面国徽<br>
+雕刻凹印技术，厚重感、立体感。</p>
+<p>（2）防复印图案<br>
+防止复印、彩印机识别真钞后停止工作。</p>
+<p>（3）左侧多层次固定水印</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">水印类型</th>
+<th style="text-align:center">水印图案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">固定人像</td>
+<td style="text-align:center">毛泽东</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">固定人像</td>
+<td style="text-align:center">毛泽东</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">固定花卉</td>
+<td style="text-align:center">荷花</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">固定花卉</td>
+<td style="text-align:center">月季花</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">固定花卉</td>
+<td style="text-align:center">水仙花</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">固定花卉</td>
+<td style="text-align:center">兰花</td>
+</tr>
+</tbody>
+</table>
+<p>紫外线下看到水印则为假币</p>
+<p>假币水印类型：<br>
+①直接胶印水印。不透光就能看到<br>
+②纸张夹层涂布白色浆料。纸张厚，浆料易滑落<br>
+③在②的基础上改进</p>
+<br>
+<p>（4）冠字号<br>
+1999版</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">横号码</th>
+<th style="text-align:center">竖号码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">黑色，有磁性</td>
+<td style="text-align:center">蓝色竖号码，无磁性</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">黑色，有磁性</td>
+<td style="text-align:center">红色竖号码，无磁性</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">红黑双色，黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">隔色印刷</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">红黑双色，黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">红黑双色，黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+</tbody>
+</table>
+<p>2005版</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">横号码</th>
+<th style="text-align:center">竖号码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">红黑双色异形（中间大两边小），黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">红黑双色异形（中间大两边小），黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">红黑双色异形（前两个大后面小），黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">红黑双色异形（前两个大后面小），黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">红黑双色，黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">红黑双色异形（前两个大后面小），黑色有磁性，红色无磁性</td>
+<td style="text-align:center">无竖号码</td>
+</tr>
+</tbody>
+</table>
+<p>2015版<br>
+100元面额横号码和竖号码之间字型、位数一致而颜色、荧光不一致</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">横号码</th>
+<th style="text-align:center">竖号码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">有色荧光竖号码<br>（正面右侧）</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+</tbody>
+</table>
+<p>2019版</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">横号码</th>
+<th style="text-align:center">竖号码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">不涉及</td>
+<td style="text-align:center">不涉及</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">无</td>
+</tr>
+</tbody>
+</table>
+<p>假币冠字号类型：<br>
+①复印<br>
+②扫描打印<br>
+③胶印<br>
+④涂抹磁性物质<br>
+⑤正面套印磁性油墨<br>
+⑥正背套印磁性油墨<br>
+⑦埋入磁条<br>
+⑧涂改HD、HB版假钞<br>
+⑨拼接真钞冠字号<br>
+⑩粘贴部分其他面额真钞安全线（安全线有磁性）</p>
+<br>
+<p>（5）胶印互补对印图案</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">对印图案</th>
+<th style="text-align:center">位置</th>
+<th style="text-align:center">面额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1999版</td>
+<td style="text-align:center">古钱币图案</td>
+<td style="text-align:center">左下角</td>
+<td style="text-align:center">100元、50元、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10元</td>
+</tr>
+<tr>
+<td style="text-align:center">2005版</td>
+<td style="text-align:center">古钱币图案</td>
+<td style="text-align:center">中间</td>
+<td style="text-align:center">100元、50元、20元、10元</td>
+</tr>
+<tr>
+<td style="text-align:center">2015版100元</td>
+<td style="text-align:center">100面额数字</td>
+<td style="text-align:center">左下角</td>
+<td style="text-align:center">100元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">2019版</td>
+<td style="text-align:center">面额数字</td>
+<td style="text-align:center">左下角</td>
+<td style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50元、20元、10元</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（6）白水印</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">面额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1999版</td>
+<td style="text-align:center">10元（且10元为连笔）、5元</td>
+</tr>
+<tr>
+<td style="text-align:center">2005版</td>
+<td style="text-align:center">100元、50元、20元、10元、5元</td>
+</tr>
+<tr>
+<td style="text-align:center">2015版</td>
+<td style="text-align:center">100元</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（7）胶印缩微文字</p>
+<p>（8）凹印行名<br>
+中国人民银行</p>
+<p>（9）无色荧光面额数字<br>
+行名下面，自然光下看不到，紫外线下可看到。</p>
+<p>（10）光彩光变面额数字<br>
+2015版，从金色到绿色。</p>
+<p>（11）胶印接线印刷</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">颜色</th>
+<th style="text-align:center">正面花卉（面额数字下）</th>
+<th style="text-align:center">背面图像</th>
+<th style="text-align:center">纹饰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">橄榄绿</td>
+<td style="text-align:center">兰花</td>
+<td style="text-align:center">杭州西湖</td>
+<td style="text-align:center">彩陶图案</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">紫色</td>
+<td style="text-align:center">水仙花</td>
+<td style="text-align:center">泰山</td>
+<td style="text-align:center">中国传统建筑装饰</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">蓝色</td>
+<td style="text-align:center">月季花</td>
+<td style="text-align:center">长江三峡夔门</td>
+<td style="text-align:center">中国传统瓷器</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">棕色</td>
+<td style="text-align:center">荷花</td>
+<td style="text-align:center">桂林山水</td>
+<td style="text-align:center">青铜饕餮纹路</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">绿色</td>
+<td style="text-align:center">菊花（左侧水印为头像）</td>
+<td style="text-align:center">布达拉宫</td>
+<td style="text-align:center">少数名族挑绣图案</td>
+</tr>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">红色</td>
+<td style="text-align:center">茶花（左侧水印为头像）</td>
+<td style="text-align:center">人名大会堂</td>
+<td style="text-align:center">中国漆器朱雀花纹</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（12）凹印接线印刷</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">正面面额数字凹印接线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">红—蓝</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">绿—紫</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">棕—紫</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">浅棕—蓝黑</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">红紫—紫</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">棕—橄榄绿</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（13）磁性全埋安全线<br>
+1999版</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">安全线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元、50元</td>
+<td style="text-align:center">全埋式磁性安全线，内部印有缩微字母和面额数字（RMB100或RMB50）<br><strong>（磁性、缩微字母和数字）</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">明暗间断式（两条？）</td>
+</tr>
+<tr>
+<td style="text-align:center">10元、5元</td>
+<td style="text-align:center">全息磁性开窗缩微安全线</td>
+</tr>
+</tbody>
+</table>
+<p>2005版<br>
+除1元面额无安全线外，所有都是全息磁性开窗缩微安全线。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">安全线</th>
+<th style="text-align:center">方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元、50元</td>
+<td style="text-align:center">全埋式磁性安全线</td>
+<td style="text-align:center">背面</td>
+</tr>
+<tr>
+<td style="text-align:center">20元、10元、5元</td>
+<td style="text-align:center">全埋式磁性安全线</td>
+<td style="text-align:center">正面</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">/</td>
+</tr>
+</tbody>
+</table>
+<p>假币的安全线类型：<br>
+①单色墨胶印<br>
+②丝印<br>
+③烫印<br>
+④涂抹磁性物质<br>
+⑤夹入假的实物安全线<br>
+⑥夹入磁带<br>
+⑦人为粘贴开窗<br>
+⑧夹入剥离出来的真钞安全线</p>
+<p>（14）手工雕刻凹印头像</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">正面头像</th>
+<th style="text-align:center">背面主图案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">徐永才雕刻</td>
+<td style="text-align:center">徐永才雕刻</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">马荣雕刻</td>
+<td style="text-align:center">徐永才雕刻</td>
+</tr>
+<tr>
+<td style="text-align:center">20元、10元、5元、1元</td>
+<td style="text-align:center">马荣雕刻</td>
+<td style="text-align:center">/</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（15）光变镂空开窗安全线<br>
+当从正面变为斜视时，品红变为绿色，¥和数字。<br>
+2015版：双安全线；透光观察2015版100元光变镂空开窗安全线时，可见正反交替排列的镂空文字100。并未全埋于纸张中。无磁性。</p>
+<p>（16）凹印盲文面额文字<br>
+正面右下方，网纹，有立体感。</p>
+<p>（17）有色荧光竖号码（2015版新增）<br>
+100元面额，自然光下为蓝色，紫外线下为绿色。</p>
+<p>（18）凹印面额数字<br>
+右上角，竖着，凹印。</p>
+<p>2.背面特征</p>
+<p>（1）磁性油墨<br>
+2005版100元、50元和2015版100元，背面主图案（人民大会堂左侧、布达拉宫左侧）有较强磁性。且在红外线下也能看到图案。<br>
+2005版100元纸币背面图案中采用了有色荧光油墨。</p>
+<p>（2）有色荧光图案及无色荧光纤维丝<br>
+正面数字面额上方、背面主图案上方，在紫外线下有荧光反应。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">有色荧光原色</th>
+<th style="text-align:center">荧光图案颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">红色</td>
+<td style="text-align:center">橘黄色</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">黄绿色</td>
+<td style="text-align:center">黄色</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">绿色</td>
+<td style="text-align:center">绿色</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">土黄色</td>
+<td style="text-align:center">黄色</td>
+</tr>
+<tr>
+<td style="text-align:center">5元</td>
+<td style="text-align:center">绿色</td>
+<td style="text-align:center">绿色</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">浅棕色</td>
+<td style="text-align:center">黄色</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（3）红外油墨<br>
+背面主图案左侧（如100元人民大会堂左侧）在红外线下可见，并可见正面行名、面额等图案透过的凹痕。<br>
+2015版100元还能看到背面右上角少数民族语言的行名。</p>
+<p>（4）凹印接线印刷<br>
+背面左下角面额</p>
+<p>（5）手工雕刻凹印</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">正面头像</th>
+<th style="text-align:center">背面主图案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100元</td>
+<td style="text-align:center">徐永才雕刻</td>
+<td style="text-align:center">徐永才雕刻</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">马荣雕刻</td>
+<td style="text-align:center">徐永才雕刻</td>
+</tr>
+<tr>
+<td style="text-align:center">20元、10元、5元、1元</td>
+<td style="text-align:center">马荣雕刻</td>
+<td style="text-align:center">/</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（6）凹印缩微文字<br>
+字体高度小于0.2mm。</p>
+<p>3.其他<br>
+2019年版第五套人民币20元纸币与2005年版20元纸币相比，毛泽东头像、装饰团花、横号码、胶印对印图案防伪特征作了调整。<br>
+2005年版第五套人民币100元纸币增加的公众防伪特征是凹印手感线、白水印。<br>
+2015年版第五套人民币100元纸币较2005年版取消了隐形面额数字、光变油墨面额数字、全息磁性开窗安全线、凹印手感线防伪特征。<br>
+第五套人民币2005年版1角硬币材质为不锈钢。<br>
+2015年版第五套人民币100元纸币较2005年版100元纸币胶印对印图案、面额数字、双色异形横号码防伪特征有变化。（固定水印没变）</p>
+<br>
+<h4 id="三硬币">（三）硬币 </h4>
+<p>1.基本介绍<br>
+1957年12月1日，第二套人民币，我国首次发行辅币，发行1、2、5分硬币。<br>
+……<br>
+1992年6月1日，第四套人民币，发行1角、5角、1元硬币。1角为铝镁合金，5角为铜锌合金，1元为钢芯镀镍。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">硬币</th>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">面额特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">第二套</td>
+<td style="text-align:center">1、2、5分</td>
+<td style="text-align:center">唯一有且只有分</td>
+</tr>
+<tr>
+<td style="text-align:center">第三套</td>
+<td style="text-align:center">1、2、5角，1元</td>
+<td style="text-align:center">唯一有2角硬币</td>
+</tr>
+<tr>
+<td style="text-align:center">第四套</td>
+<td style="text-align:center">1、5角，1元</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">第五套</td>
+<td style="text-align:center">1、5角，1元</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>第五套硬币背面图案</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">硬币面额</th>
+<th style="text-align:center">背面图案</th>
+<th style="text-align:center">侧面</th>
+<th style="text-align:center">尺寸</th>
+<th style="text-align:center">材质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">菊花</td>
+<td style="text-align:center">光边滚字</td>
+<td style="text-align:center">25mm</td>
+<td style="text-align:center">钢芯镀镍</td>
+</tr>
+<tr>
+<td style="text-align:center">5角</td>
+<td style="text-align:center">荷花</td>
+<td style="text-align:center">间断直丝尺</td>
+<td style="text-align:center">20.5mm</td>
+<td style="text-align:center">钢芯镀铜锡合金（铜色）</td>
+</tr>
+<tr>
+<td style="text-align:center">1角</td>
+<td style="text-align:center">兰花</td>
+<td style="text-align:center">光边圆柱</td>
+<td style="text-align:center">19mm</td>
+<td style="text-align:center">铝合金/不锈钢</td>
+</tr>
+</tbody>
+</table>
+<p>2019版硬币</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">硬币面额</th>
+<th style="text-align:center">背面图案</th>
+<th style="text-align:center">尺寸</th>
+<th style="text-align:center">材质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">菊花</td>
+<td style="text-align:center">尺寸减小为22.25mm</td>
+<td style="text-align:center">钢芯镀镍</td>
+</tr>
+<tr>
+<td style="text-align:center">5角</td>
+<td style="text-align:center">荷花</td>
+<td style="text-align:center">20.5mm</td>
+<td style="text-align:center">改为钢芯镀镍（涅白色）</td>
+</tr>
+<tr>
+<td style="text-align:center">1角</td>
+<td style="text-align:center">兰花</td>
+<td style="text-align:center">19mm</td>
+<td style="text-align:center">铝合金/不锈钢</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>2.防伪技术</p>
+<p>（1）表面图文</p>
+<p>（2）边部设计</p>
+<br>
+<h4 id="四2019版第五套人民币">（四）2019版第五套人民币 </h4>
+<p>2019年8月30日发行。2019年版第五套人民币共发行4种面额纸币（50元、20元、10元、1元）和3种面额硬币（1元、5角、1角）。2019年版第五套人民币50元、20元、10元纸币的纵向尺寸相同。</p>
+<p>1.票面设计<br>
+50元、20元、10元、整体沿用2005版，1元整体沿用1999版。规格、主图案、主色调、“中国人民银行”行名、国徽、盲文面额标记、汉语拼音行名、民族文字等要素保持不变。</p>
+<p>（1）中部面额数字调整为光彩光变面额数字。50元、20元、10元。</p>
+<p>（2）调整装饰团花的样式。团花颜色发生变化，颜色更鲜亮。50元、20元、10元、1元。</p>
+<p>（3）左侧增加装饰纹样。正面左侧防复印图案左侧水印处。50元、20元、10元、1元。</p>
+<p>（4）调整横号码的样式。双色异性→双色大小一致。50元、20元、10元、1元。</p>
+<p>（5）调整胶印对印图案的样式。从05版古钱币图案调整为19版面额数字。50元、20元、10元。</p>
+<p>（6）取消光变油墨面额数字。05版左下角光变油墨面额数字取消。50元。</p>
+<p>（7）右侧增加开窗安全线。50元、20元、10元。</p>
+<p>（8）右侧增加竖号码。蓝色。50元、20元、10元。</p>
+<p>（9）调整毛泽东头像的样式。更清晰。50元、20元、10元、1元。</p>
+<p>（10）调整右上角面额数字的样式。数字方向由横变竖。50元、20元、10元、1元。</p>
+<p>（11）取消右侧隐形图案和手感线。手感线位置变为竖号码（1元没有竖号码，空白）。50元、20元、10元、1元。</p>
+<p>（12）调整背面主景图的样式。背面图像的景点内容不变。50元、20元、10元、1元。</p>
+<p>（13）调整面额数字的样式。背面左上角、右上角、左下角。50元、20元、10元、1元。</p>
+<p>（14）调整胶印对印图案的样式。正面左下角则背面右下角。50元、20元、10元。</p>
+<p>（15）取消全息磁性开窗安全线。中间→无。50元、20元、10元。</p>
+<p>（16）取消右下角局部图案。取消背面右下角防复印图案。50元、20元、10元、1元。</p>
+<p>（17）年号更改。“2005”→“2019”。50元、20元、10元、1元。</p>
+<p>2.防伪特征<br>
+2019年版第五套人民币50元、20元、10元、1元纸币不再以2015年版100元纸币防伪技术为上限，采用光彩光变、动感光变安全线等公众防伪特征和磁性编码、红外图案等专业防伪特征共14项，其中可供机读的防伪特征有：磁性、紫外、红外特征等。</p>
+<p>（1）光彩光变面额数字<br>
+票面正面中部。改变钞票观察角度，面额数字发生变化，并可见一条亮光带上下滚动。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">面额数字颜色变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2015版100元</td>
+<td style="text-align:center">金色变绿色</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">金色变绿色</td>
+</tr>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">绿色变蓝色</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">绿色变蓝色</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（2）开窗安全线<br>
+位于正面右侧。改变钞票观察角度，安全线颜色在红色和绿色之间变化，50元安全线亮光带上下滚动，透光观察可见货币符号￥与面额数字。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">安全线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">动感光变镂空</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">光变镂空</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">光变镂空</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（3）雕刻凹印<br>
+正面毛泽东头像、国徽、“中国人民银行”行名、装饰团花、右上角面额数字、盲文面额标记及背面主景等均采用雕刻凹版印刷，触摸有凹凸感。50元、20元、10元、1元。</p>
+<p>（4）多层次水印<br>
+正面左侧。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">水印</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">50元</td>
+<td style="text-align:center">毛泽东头像</td>
+</tr>
+<tr>
+<td style="text-align:center">20元</td>
+<td style="text-align:center">花卉，荷花</td>
+</tr>
+<tr>
+<td style="text-align:center">10元</td>
+<td style="text-align:center">花卉，月季</td>
+</tr>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">花卉，兰花</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（5）白水印<br>
+正面左下角面额数字白水印。</p>
+<p>（6）胶印对印图案<br>
+50元、20元、10元。</p>
+<p>（7）无色荧光图案<br>
+正面中部面额数字上方。在特定波长紫外光下，可见黄绿色荧光。</p>
+<p>（8）无色荧光纤维<br>
+随机分布在纸张中，在特定波长紫外光下，可见黄色和蓝色荧光纤维。</p>
+<p>（9）有色荧光图案<br>
+位于票面背面，在特定波长紫外光下，部分胶印图案呈现荧光效果。黄绿色。</p>
+<p>（10）有色荧光竖号码<br>
+在特定波长紫外光下，绿色荧光竖号码。50元、20元、10元（1元无竖号码）。</p>
+<p>（11）磁性横号码<br>
+左下角。</p>
+<p>（12）磁性全埋安全线<br>
+正面中部。取消开窗安全线变为全埋安全线。</p>
+<p>（13）红外图案<br>
+背面。用特定红外仪器观察，凹印图案部分可见。50元、20元、10元（1元无）。</p>
+<p>（14）防复印标记<br>
+正面左侧和背面右侧。</p>
+<p>3.其他说明<br>
+易识别、难伪造、耐流通。</p>
+<br>
+<h4 id="五2019版硬币">（五）2019版硬币 </h4>
+<p>1.基本设计</p>
+<p>（1）调整正面面额数字的造型<br>
+无衬线体，倾斜处理</p>
+<p>（2）背面花卉图案适当收缩<br>
+花卉图案的面积占比减小</p>
+<p>（3）正面边部增加圆点<br>
+周围一圈小圆点。1元、1角。</p>
+<p>（4）内周缘由圆形调整为多边形（5角）<br>
+5角硬币</p>
+<p>（5）规格和材质改变<br>
+1元硬币直径由25毫米改为22.25毫米。5角硬币材质由钢芯镀铜合金改为钢芯镀镍。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">硬币面额</th>
+<th style="text-align:center">背面图案</th>
+<th style="text-align:center">尺寸</th>
+<th style="text-align:center">材质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1元</td>
+<td style="text-align:center">菊花</td>
+<td style="text-align:center">尺寸减小为22.25mm</td>
+<td style="text-align:center">钢芯镀镍</td>
+</tr>
+<tr>
+<td style="text-align:center">5角</td>
+<td style="text-align:center">荷花</td>
+<td style="text-align:center">20.5mm</td>
+<td style="text-align:center">改为钢芯镀镍（涅白色）</td>
+</tr>
+<tr>
+<td style="text-align:center">1角</td>
+<td style="text-align:center">兰花</td>
+<td style="text-align:center">19mm</td>
+<td style="text-align:center">铝合金/不锈钢</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（6）采用先进防伪技术，提升防伪能力<br>
+新增缩微文字、新增隐形图文，保留原有外缘滚字。</p>
+<p>2.防伪特征</p>
+<p>（1）1元硬币防伪特征</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">防伪特征类型</th>
+<th style="text-align:center">防伪特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">公众防伪特征</td>
+<td style="text-align:center">①隐形图文；②外缘滚字</td>
+</tr>
+<tr>
+<td style="text-align:center">专业防伪特征</td>
+<td style="text-align:center">①缩微文字；②电磁特征</td>
+</tr>
+</tbody>
+</table>
+<p>①隐形图文<br>
+在1元硬币正面面额数字轮廓线内，有一组隐形图文“￥”和“1”。转动硬币从特定角度可以分别看到“￥”和“1”。</p>
+<p>②外缘滚字<br>
+等距离分布三组“RMB”</p>
+<p>③缩微文字<br>
+正面面额数字轮廓线底端，缩微文字“RMB”。</p>
+<p>④电磁特征<br>
+用特定仪器检测。</p>
+<p>（2）5角硬币防伪特征</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">防伪特征类型</th>
+<th style="text-align:center">防伪特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">公众防伪特征</td>
+<td style="text-align:center">①间断丝齿</td>
+</tr>
+<tr>
+<td style="text-align:center">专业防伪特征</td>
+<td style="text-align:center">①缩微图案；②电磁特征</td>
+</tr>
+</tbody>
+</table>
+<p>①间断丝齿<br>
+外缘面有六个丝齿段，每个丝齿段有八个齿距相等的丝齿。</p>
+<p>②缩微图案<br>
+5角硬币背面荷花图案下方的浮萍轮廓范围内的点阵中有三个形似“☆”的图案，借助放大镜可见。</p>
+<p>③电磁特征<br>
+用特定仪器检测。</p>
+<p>（3）1角硬币防伪特征</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">防伪特征类型</th>
+<th style="text-align:center">防伪特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">公众防伪特征</td>
+<td style="text-align:center">无</td>
+</tr>
+<tr>
+<td style="text-align:center">专业防伪特征</td>
+<td style="text-align:center">①电磁特征</td>
+</tr>
+</tbody>
+</table>
+<p>①电磁特征<br>
+用特定仪器检测。</p>
+<br>
+<h4 id="六纪念币-纪念钞">（六）纪念币、纪念钞 </h4>
+<p>1.航天纪念钞<br>
+正面主景图案：为神舟九号飞船与天宫一号交会对接图案。左上方为国徽图案、“中国人民银行“行名，其下方为东方红一号卫星图案。票面左下方为面额数字“100”和汉字“壹佰圆”。主景图案右侧为嫦娥一号卫星图案，其上方为面额数字“100”和“中国航天纪念”字样。<br>
+背面主景图案：由上至下依次为嫦娥一号卫星图案、2020年中国空间站“天宫”、喷气式客机、冯如2号双翼螺旋桨飞机、飞禽海东青图案。票面左上角为风筝局部图案，右上角为面额数字“100”。票面下方为行长章与年号“2015”，中国人民银行汉语拼音字母和蒙、藏、维、壮四种民族文字的“中国人民银行”字样与面额，面额数字“100”，汉语拼音字母“YUAN”。</p>
+<p>（1）水印<br>
+票面正面右侧空白处。透光观察，可见“东方红一号卫星”黑水印。</p>
+<p>（2）白水印<br>
+票面正面右下方。面额数字“100”字样白水印。</p>
+<br>
+<h3 id="二-相关标准">二、相关标准 </h3>
+<br>
+<h4 id="一不宜流通纸币">（一）不宜流通纸币 </h4>
+<p>1.定义<br>
+（1）不宜流通纸币类型（12种）：脏污、污渍、脱墨、缺失、粘贴、撕裂、拼接、变形、涂写、皱折、绵软、炭化。<br>
+（2）光反射比<br>
+（3）明度<br>
+（4）三刺激值<br>
+（5）弯曲挺度</p>
+<p>2.评价标准</p>
+<p>（1）脏污<br>
+人民币纸币在流通过程中自然磨损、老化，使票面整体颜色改变，按照规定的各面额人民币纸币采样点及检测方法（光谱光度测色法），检测人民币纸币的明度值，若人民币纸币的明度值小于等于规定的明度标准，为不宜流通人民币纸币。<br>
+明度值检测方法：按照光谱光度测色法，分别采集人民币纸币正面和背面各4个采样点的光谱反射比，分别计算各采样点三刺激值，并计算每个采样点的明度值，用人民币纸币正面明度值、背面明度值的平均值中较小的值来衡量人民币纸币的脏污程度。</p>
+<p>（2）污渍<br>
+有下列情形之一的为不宜流通人民币：①印刷区累计污渍面积大于150mm²（污渍面积大于4mm²计入累计量），或单个污渍面积大于100mm²。②非印刷区累计污渍面积大于60mm²（污渍面积大于4mm²计入累计量），或单个污渍面积大于40mm²。③污渍面积虽未超过规定标准，但遮盖重要防伪特征之一，影响防伪功能的。</p>
+<p>（3）脱墨<br>
+有下列情形之一的为不宜流通人民币：①累计脱墨面积大于80mm²（脱墨面积大于10mm²计入累积量）的。②单处脱墨面积大于100mm²的。③脱墨面积虽未超过规定标准，但遮盖重要防伪特征之一，影响防伪功能的。</p>
+<p>（4）缺失<br>
+有下列情形之一的为不宜流通人民币：①票面（不含4个角及安全线）缺失，单处缺失面积大于10mm²或票面多处缺失，累计缺失面积大于12mm²的（缺失面积大于4mm²计入累计量）。②票面单个缺角，其缺角面积大于20mm²，或票面多个缺角，缺角面积累计大于30mm²的（缺角面积大于4mm²计入累计量）。③票面安全线缺失10mm以上，或其他重要防伪特征之一缺失，影响防伪功能的。</p>
+<p>（5）粘贴<br>
+有下列情形之一的为不宜流通人民币：①票面出现一处粘贴物，粘贴物面积大于100mm²的。②票面出现多处粘贴物，粘贴的累计面积大于60mm²的（粘贴面积大于10mm²计入累计量）。③粘贴物面积虽未超过规定标准，但遮盖了重要防伪特征之一，影响防伪功能的。</p>
+<p>（6）撕裂<br>
+有下列情形之一的为不宜流通人民币：①票面出现一处撕裂，撕裂长度大于10mm的。②票面出现多处撕裂，累计撕度大于9mm（撕裂长度大于3mm计入累计量）。③撕裂长度虽未超过规定标准，但撕裂了任一一处重要防伪特征的，影响防伪功能。</p>
+<p>（7）拼接<br>
+人民币纸币损坏为2部分（含）以上，通过粘贴等方式按原样连接的，为不宜流通人民币。</p>
+<p>（8）变形<br>
+人民币纸币形状、尺寸发生变化，票幅长边与标准规格相差2%以上，或票幅宽边与标准规格相差4%以上的，为不宜流通人民币。</p>
+<p>（9）涂写<br>
+有下列情形之一的为不宜流通人民币：①票面出现一处涂写，其涂写面积大于100mm²的。②票面出现多处涂写，累计涂写面积大于40mm²的（涂写面积大于mm²计入累计量）。③票面涂写面积虽未超过规定标准，但遮盖了重要防伪特征之一，影响<br>
+防伪功能的。</p>
+<p>（10）皱折<br>
+有下列情形之一的为不宜流通人民币：①票面出现一处皱褶，褶纹明显，皱褶处纸质变软、起毛、无法恢复原状，皱褶长度大于10mm。②票面出现4处（含）以上皱褶，褶纹明显，皱褶处纸质变软、起毛、无法恢复原状，累计皱褶长度大于20mm（皱褶长度大于6mm计入累计量）。③票面出现贯穿纸币的明显折痕，折痕处纸质变软、起毛的。</p>
+<p>（11）绵软<br>
+人民币纸币纸质变软、结构损坏，明显失去挺括度，按照人民银行规定的各面额人民币纸币采样点及检测条件，检测的人民币纸币弯曲挺度值若小于等于规定弯曲挺度标准，为不宜流通人民币。</p>
+<p>（12）炭化<br>
+有下列情形之一的为不宜流通人民币：①票面出现一处炭化，其炭化面积大于10mm²的。②票面出现多处炭化，累计炭化面积大于18mm²的（炭化面积大于4mm²计入累计量）。③票面炭化面积虽未超过规定标准，但任一一处重要防伪特征被炭化的，影响防伪功能的。</p>
+<br>
+<h4 id="一不宜流通硬币">（一）不宜流通硬币 </h4>
+<p>（1）规格变化<br>
+人民币硬币在流通过程中有下列情形之一的，为不宜流通人民币：①直径、重量与标准值相差大于5%；②边部厚度与标准值相差大于10%</p>
+<p>（2）污渍<br>
+人民币硬币在流通过程中因受到侵蚀，形成不可去除的污渍，有下列情形之一的，为不宜流通人民币：①币面单个污渍面积大于标准面积的5%；②多个污渍累计面积大于标准面积的10%；③污渍遮盖文字、数字、图案之一，影响辨别面额或真伪。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">硬1分</th>
+<th style="text-align:center">硬2分</th>
+<th style="text-align:center">硬5分</th>
+<th style="text-align:center">硬1角（1999版）</th>
+<th style="text-align:center">硬1角（2005年版）</th>
+<th style="text-align:center">硬5角（1999年版和2005年版）</th>
+<th style="text-align:center">硬1元（1999年版和2005年版）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标准面积（mm²）</td>
+<td style="text-align:center">254</td>
+<td style="text-align:center">346</td>
+<td style="text-align:center">452</td>
+<td style="text-align:center">284</td>
+<td style="text-align:center">284</td>
+<td style="text-align:center">330</td>
+<td style="text-align:center">491</td>
+</tr>
+<tr>
+<td style="text-align:center">单个污渍面积（mm²）</td>
+<td style="text-align:center">&gt;12.7</td>
+<td style="text-align:center">&gt;17.3</td>
+<td style="text-align:center">&gt;22.6</td>
+<td style="text-align:center">&gt;14.2</td>
+<td style="text-align:center">&gt;14.2</td>
+<td style="text-align:center">&gt;16.5</td>
+<td style="text-align:center">&gt;24.55</td>
+</tr>
+<tr>
+<td style="text-align:center">多个污渍累计面积（mm²）</td>
+<td style="text-align:center">&gt;25.4</td>
+<td style="text-align:center">&gt;34.6</td>
+<td style="text-align:center">&gt;45.2</td>
+<td style="text-align:center">&gt;28.4</td>
+<td style="text-align:center">&gt;28.4</td>
+<td style="text-align:center">&gt;33</td>
+<td style="text-align:center">&gt;49.1</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>（3）磨损<br>
+人民币硬币在流通过程中出现磨损，有下列情形之一的，为不宜流通人民币：①币面出现一处磨损，深度大于0.1mm，磨损面积大于标准面积的5%；②币面出现多处磨损，深度大于0.1mm，累计磨损面积大于标准面积的10%；③币面文字、数字、图案之一受损向辨别面额或真伪。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">硬1分</th>
+<th style="text-align:center">硬2分</th>
+<th style="text-align:center">硬5分</th>
+<th style="text-align:center">硬1角（1999版）</th>
+<th style="text-align:center">硬1角（2005年版）</th>
+<th style="text-align:center">硬5角（1999年版和2005年版）</th>
+<th style="text-align:center">硬1元（1999年版和2005年版）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标准面积（mm²）</td>
+<td style="text-align:center">254</td>
+<td style="text-align:center">346</td>
+<td style="text-align:center">452</td>
+<td style="text-align:center">284</td>
+<td style="text-align:center">284</td>
+<td style="text-align:center">330</td>
+<td style="text-align:center">491</td>
+</tr>
+<tr>
+<td style="text-align:center">一处磨损面积（mm²）</td>
+<td style="text-align:center">&gt;12.7</td>
+<td style="text-align:center">&gt;17.3</td>
+<td style="text-align:center">&gt;22.6</td>
+<td style="text-align:center">&gt;14.2</td>
+<td style="text-align:center">&gt;14.2</td>
+<td style="text-align:center">&gt;16.5</td>
+<td style="text-align:center">&gt;24.55</td>
+</tr>
+<tr>
+<td style="text-align:center">多处磨损累计面积（mm²）</td>
+<td style="text-align:center">&gt;25.4</td>
+<td style="text-align:center">&gt;34.6</td>
+<td style="text-align:center">&gt;45.2</td>
+<td style="text-align:center">&gt;28.4</td>
+<td style="text-align:center">&gt;28.4</td>
+<td style="text-align:center">&gt;33</td>
+<td style="text-align:center">&gt;49.1</td>
+</tr>
+</tbody>
+</table>
+<p>（4）变色<br>
+在流通过程中因自然氧化、火烧等原因，使币面色泽发生较大改变、图案模糊不清，或光泽度变暗，影响辨别面额或真伪的。</p>
+<p>（5）变形<br>
+在流通过程中出现扭曲、弯折、凸起、凹坑或其他变形，其最低面直径与最高面直径差值大于1mm，或整体厚度与标准边部厚度差值大于1mm的，为不宜流通人民币。</p>
+<p>（6）孔洞<br>
+人民币硬币在流通过程中出现可见光孔洞的。</p>
+<p>（7）裂痕<br>
+人民币硬币在流通过程中出现裂纹或裂口及划痕，有下列情形之一的，为不宜流通人民币：①币面边沿内出现裂纹或裂口，径向深度大于1mm，单个裂纹或裂口长度超过3mm，且累计长度大于标准周长的10%；②币面出现划痕，径向深度大于1mm，单个划痕长度大于2mm，且累计长度大于标准周长的15%；③文字、数字、图案之一受损，影响辨别面额或真伪。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">面额</th>
+<th style="text-align:center">硬1分</th>
+<th style="text-align:center">硬2分</th>
+<th style="text-align:center">硬5分</th>
+<th style="text-align:center">硬1角（1999版）</th>
+<th style="text-align:center">硬1角（2005年版）</th>
+<th style="text-align:center">硬5角（1999年版和2005年版）</th>
+<th style="text-align:center">硬1元（1999年版和2005年版）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标准周长（mm）</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">75</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">79</td>
+</tr>
+<tr>
+<td style="text-align:center">裂纹或裂口累计长度（mm）</td>
+<td style="text-align:center">&gt;5.7</td>
+<td style="text-align:center">&gt;6.6</td>
+<td style="text-align:center">&gt;7.5</td>
+<td style="text-align:center">&gt;6</td>
+<td style="text-align:center">&gt;6</td>
+<td style="text-align:center">&gt;6.4</td>
+<td style="text-align:center">&gt;7.9</td>
+</tr>
+<tr>
+<td style="text-align:center">划痕累计长度（mm）</td>
+<td style="text-align:center">&gt;8.55</td>
+<td style="text-align:center">&gt;9.9</td>
+<td style="text-align:center">&gt;11.25</td>
+<td style="text-align:center">&gt;9</td>
+<td style="text-align:center">&gt;9</td>
+<td style="text-align:center">&gt;9.6</td>
+<td style="text-align:center">&gt;11.85</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三-外币">三、外币 </h3>
+<h4 id="一美元">（一）美元 </h4>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
