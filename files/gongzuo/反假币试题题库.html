@@ -1,0 +1,315 @@
+<!DOCTYPE html><html><head>
+      <title>反假币试题题库</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      ::selection {background-color: #cdf3e0;color:green}code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="center反假币试题题库center"><center>反假币试题题库</center> </h1>
+<h3 id="一般题库">一般题库 </h3>
+<p>17.[单选题]《不宜流通人民币纸币》行业标准规定，人民币纸币尺寸形状发生变化，票幅宽边与标准规格相差（）%以上，为不宜流通人民币。<br>
+A.2<br>
+B.3<br>
+C.4<br>
+D.5<br>
+正确答案：C</p>
+<h3 id="假币特征">假币特征 </h3>
+<p>9.[单选题]关于人民币2019年版1元凹印缩微文字特征，正确的表述是（）。<br>
+A.在正面大面额数字内；<br>
+B.在正面团花中有凹印缩微；<br>
+C.在正面主景下方有凹印缩微；<br>
+D.在背面景下方有数排凹印缩微<br>
+正确答案：A</p>
+<p>14.[单选题]人民币1999年版和2005年版元20元和1元有凹印缩微文字特征（）<br>
+A.正面团花中；<br>
+B.背面左下大面额数字内；<br>
+C.正面中间大面额数字内；<br>
+D.正面右上角隐形面额数字外围<br>
+正确答案：D</p>
+<p>20.[单选题]第五套人民币凹印接线特征位于（）。<br>
+A.正面汉字面额、团花和正背面大面额数字；<br>
+B.正背面主景；<br>
+C.正面上方底纹；<br>
+D.正面团花下底纹。<br>
+正确答案：A</p>
+<p>28.[单选题]人民币2015年版、2019年版和2020年版背面应用的防复印标记有（）处。<br>
+A.1；<br>
+B.2；<br>
+C.3；<br>
+D.4<br>
+正确答案：A（旧版正面一处、背面两处；新版正面一处、背面一处）</p>
+<p>34.[单选题]第五套人民币安全线有（）类型。<br>
+A. 4种；<br>
+B. 3种；<br>
+C. 6种;<br>
+D.2种<br>
+正确答案：A</p>
+<p>51.[多选题]人民币2019年版50元、20元和10元的安全线文字是（）。<br>
+A.开窗安全线文字为RMB+面额数字；<br>
+B.全埋安全线文字为RMB+面额数字；<br>
+C.开窗安全线文字为¥+面额数字；<br>
+D.全埋安全线文字为面额数字<br>
+正确答案：CD</p>
+<p>64.[多选题]关于第五套人民币10元和5元凹印缩微文字特征，正确的表述是（）。<br>
+A.所有年版正面有一处凹印缩微；<br>
+B.所有年版背面有两处凹印缩微；<br>
+C.1999年版和2005年版正面隐形面额图案周围有凹印缩微；<br>
+D.所有年版背面主景下方有数排凹印缩微文字<br>
+正确答案：ABCD</p>
+<p>87.[判断题]纸币的全息特征属于光变防伪特征（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：正确</p>
+<h3 id="反假程序">反假程序 </h3>
+<p>1.[单选题]《货币真伪鉴定书》一式（）份。<br>
+A.一；<br>
+B.二；<br>
+C.三；<br>
+D.四<br>
+正确答案: C</p>
+<p>7.[单选题]银行业金融机构从人民银行调入其他银行已清分现金后，利用本行清分机或A类点验钞机重新清点并记录冠字号码清点过程中发现的假币，责任归（）。<br>
+A.本行<br>
+B.原封捆单位<br>
+C.人民银行<br>
+正确答案：B</p>
+<p>15.[单选题]金融机构现金管理部门将本行清分中心发现的假币集中整理，随同（）电子和纸质文档，一并解缴到当地人民银行。<br>
+A.《假币代保管登记簿》；<br>
+B.《假币解缴单》；<br>
+c.《假币收缴登记簿》；<br>
+D.《假币收缴凭证》<br>
+正确答案：B</p>
+<p>25.[单选题]关于假币收缴凭证，错误的表述是（）。<br>
+A.凭证盖章处加盖收缴单位业务公章；<br>
+B.凭证文字信息为中英文双语；<br>
+C.币种、版别、券别相同，冠字号码重号或连号的可合并填写；<br>
+D.该凭证一式二份，收缴单位和被收缴人各持一份<br>
+正确答案：B</p>
+<p>56.[多选题]金融机构清分中心对自助设备回笼款中发现假币的处置是（）。<br>
+A.按柜面发现假币处理；<br>
+B.按误收假币处理；<br>
+C.假币不盖章装专用袋；<br>
+D.当月15日之前解缴到当地人民银行<br>
+正确答案：BC</p>
+<p>63.[多选题]《中国人民银行货币鉴别及假币收缴、鉴定管理办法》补充修订的假币收缴、鉴定业务规定包括（）<br>
+A.办理反假业务的监控录像保存时间要求；<br>
+B.清分中发现假币收缴流程；<br>
+C.现金从业人员培训评估要求；<br>
+D.取消鉴定行为的行政复议诉讼规定<br>
+正确答案：ABD</p>
+<p>66.[多选题]银行业金融机构现金清分中心发现假人民币处置工作规程（试行）所指银行业金融机构现金清分中心是指直接在人民银行发行库办理现金缴存业务的银行业金融机构设置的有（）的部门。<br>
+A.专门场所<br>
+B.配备专职人员<br>
+C.配备现金清分设备<br>
+D.专门从事现金整点<br>
+正确答案：ABCD</p>
+<p>93.[判断题]申请货币真伪再鉴定需要填写再鉴定申请书（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：错误（只有鉴定书，没有再鉴定书）</p>
+<h3 id="纪念钞">纪念钞 </h3>
+<p>18.[单选题]“第24届冬季奥林匹克运动会”纪念钞雪上项目正面左下方的灯笼具有（）特征。<br>
+A.有色荧光；<br>
+B.全息动感；<br>
+C.全息3D；<br>
+D.光彩光变面额数字<br>
+正确答案：C</p>
+<p>68.[多选题]“第24届冬季奥林匹克运动会”纪念钞应用的新防伪征有（）。<br>
+A.全息3D特征；<br>
+B.全息动感数字；<br>
+C.磁性数字；<br>
+D.光彩光变面额数字。<br>
+正确答案：AB</p>
+<p>96.[判断题]“中国航天纪念钞”的动感光变开窗安全线是在人民币纸币上首次应用这一特征。<br>
+A.正确<br>
+B.错误<br>
+正确答案：正确</p>
+<p>84.[判断题]现金从业人员鉴伪能力管理制度属于假币收缴制度内容（）<br>
+A.正确<br>
+B.错误<br>
+正确答案：错误</p>
+<h3 id="美元">美元 </h3>
+<p>5.[单选题]（），彩钞版100美元正面主景右侧空白处可见富兰克林头像水印。<br>
+A.在红外光下；<br>
+B.在紫外光下；<br>
+C.迎光透视；<br>
+D.背对光源<br>
+正确答案：C</p>
+<p>10.[单选题]美元彩钞版扩大了缩微文字的应用，（）在背面也设置了缩微文字。<br>
+A.1美元和2美元<br>
+B.50美元和10美元；<br>
+C.20美元和10美元；<br>
+D.100美元和5美元<br>
+正确答案：D</p>
+<p>23.[单选题]流通中的美元纸币票幅统一为（）。<br>
+A.132×66毫米；<br>
+B.66×156毫米；<br>
+C.156×66毫米；<br>
+D.150x76毫米<br>
+正确答案：C</p>
+<p>11.[单选题]1990以后发行的美元纸币加入了缩微文字特征，观察这一特征需要（）。<br>
+A.红外光；<br>
+B.紫外光；<br>
+C.放大镜；<br>
+D.荧光<br>
+正确答案：C</p>
+<p>41.[多选题]彩钞版美元的（）采用凸版印刷技术。<br>
+A.光变油墨面额数字；<br>
+B.彩色底纹；<br>
+C.冠字号码；<br>
+D.两个印章<br>
+正确答案：CD</p>
+<p>40.[多选题]20美元和10美元正面和背面主景分别是（）。<br>
+A.20美元杰克逊和白宫；<br>
+B.20美元是杰克逊和国会大厦；<br>
+C.10美元是汉密尔顿和财政部大楼；<br>
+D.10美元是汉密尔顿和国会大厦。<br>
+正确答案：AC</p>
+<p>91.[判断题]美元纸币正背面都应用了雕刻凹印技术（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：正确</p>
+<p>97.[判断题]美元大头版和彩钞版相同面额的安全线在紫外光下呈现相同荧光颜色（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：正确</p>
+<h3 id="欧元">欧元 </h3>
+<p>27.[单选题]第二版欧元有（）种面额。<br>
+A.5；<br>
+B.6；<br>
+C.4；<br>
+D.7<br>
+正确答案：B</p>
+<p>5.[单选题]在紫外光下，可观察到第一版欧元正背面随机分布着（）荧光纤维。<br>
+A.红、蓝、绿三色；<br>
+B.红、蓝双色；<br>
+C.红、黄、蓝三色；<br>
+D.蓝、绿双色<br>
+正确答案：A</p>
+<p>50.[多选题]第二版欧元的面额包括（）。<br>
+A.500欧元；<br>
+B.200欧元；<br>
+C.100欧元；<br>
+D.20欧元<br>
+正确答案：BCD</p>
+<p>39.[多选题]长波紫外光下，第一版和第二版欧元呈现出不同的荧光特征，其中（）。<br>
+A.第一版正面欧盟旗和行长签名为绿色荧光；<br>
+B.第二版欧盟旗和行长签名无荧光；<br>
+C.第一版背面桥梁、地图和面额数字为黄色荧光；<br>
+D.第一版背面桥梁、地图和面额数字无荧光<br>
+正确答案：ABC</p>
+<p>46.[多选题]第一版欧元应用了光变油墨数字，其特征是（）。<br>
+A.位于20欧元及以上面额背面右下角；<br>
+B.位于50欧元及以上面额背面右下角；<br>
+C.需要前后晃动观察；<br>
+D.变色效果是紫色变橄榄绿色<br>
+正确答案：BCD</p>
+<p>54.[多选题]长波紫外光下，第一版和第二版欧元呈现出不同的荧光特征，其中（）。<br>
+A.第一版正面欧盟旗和行长签名为绿色荧光；<br>
+B.第二版欧盟旗和行长签名无荧光；<br>
+C.第一版背面桥梁、地图和面额数字为黄色荧光；<br>
+D.第一版背面桥梁、地图和面额数字无荧光<br>
+正确答案：ABC</p>
+<p>79.[判断题]两版欧元的全埋安全线上文字完全相同（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：错误</p>
+<p>95.[判断题]第一版和第二版100欧元长度相同，宽度不同（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：A</p>
+<h3 id="英镑">英镑 </h3>
+<p>48.[多选题]英镑塑料钞（）等部位应用了凹印防伪技术，手摸有明显的凹凸感。<br>
+A.正面主景人像；<br>
+B.正面行名；<br>
+C.背面主景；<br>
+D.正面英文面额<br>
+正确答案：ABD</p>
+<h3 id="港元">港元 </h3>
+<p>21.[单选题]把港元2018年版票面与视线平行，在正面主景中下部可见隐形（）。<br>
+A.行徽与面额数字；<br>
+B.面额数字；<br>
+C.行名缩写与面额数字；<br>
+D.花卉与面额数字<br>
+正确答案：B</p>
+<p>1.[单选题]透光观察，港元2010年版安全线上有极为细小的（“HK”组成大的“HK”字样）。<br>
+A.荧光文字；<br>
+B.镂空文字；<br>
+C.隐形文字；<br>
+D.黑色文字<br>
+正确答案：B</p>
+<p>32.[单选题]港元2010年版的珠光油墨特征位于（），需要迎光观察。<br>
+A.正面主是右下部<br>
+B.正面主星左下部<br>
+C.背面主是左下部<br>
+D.背面主景右下部<br>
+正确答案：B</p>
+<p>50.[多选题]港元2010年版在应用了凹印隐形特征，把票面与视线平行，迎光旋转到一定角度可见。<br>
+A.所有面额正面主景上部；<br>
+B.汇丰银行券背面右侧；<br>
+C.所有面额正面主景下部；<br>
+D.中国银行券背面右侧<br>
+正确答案：CD</p>
+<p>28.[单选题]港元2010年版的水印图案是（）。<br>
+A.洋紫荆花、面额数字和网点图案；<br>
+B.洋紫荆花和面额数字；<br>
+C.狮头、面额数字、网点图案；<br>
+D.面额数字和网点图案<br>
+正确答案：A</p>
+<p>59.[多选题]港元2010年版的光彩光变图案为（）<br>
+A.汇丰银行是狮头加面额数字；<br>
+B.渣打银行是神兽加面额数字；<br>
+C.渣打银行是面额数字；<br>
+D.中国银行是洋紫荆花加面额数字<br>
+正确答案：ACD</p>
+<p>61.[多选题]港元2018年版在（）应用了凹印缩微，需要放大观察。<br>
+A.所有面额正面左上大面额数字；<br>
+B.所有面额背面右上大面额数字；<br>
+C.中国银行券正面主景洋紫荆花；<br>
+D.汇丰银行券正面主景狮像<br>
+正确答案：ABC</p>
+<p>68.[多选题]港元2010年版里荧光特征的部位是（）。<br>
+A.盲文面额标识<br>
+B.对印图案<br>
+C.竖冠字号码<br>
+D.行名<br>
+正确答案：BC</p>
+<p>95.[判断题]流通中的10港元纸币有纸钞和塑料钞两种，主色调、票幅、主景图案基本相同（）。<br>
+A.正确<br>
+B.错误<br>
+正确答案：A</p>
+<p>78.[判断题]目前流通中的港元纸币正背面主景、行名、签名等处均应用了凹版印刷，用手触摸有明显的凹凸感。<br>
+A.正确<br>
+B.错误<br>
+正确答案：正确</p>
+<h3 id="日元">日元 </h3>
+<h3 id="加元">加元 </h3>
+<p>1.[多选题]关于2018年版10加元，正确的表述是（）。<br>
+A.票面为竖版；<br>
+B.使用复合基材；<br>
+C.新增光彩光变、全息3D等特征；<br>
+D.首次采用加拿大女性形象作为正面主景人像<br>
+正确答案: AD</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
